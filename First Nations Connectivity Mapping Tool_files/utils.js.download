@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.32/esri/copyright.txt for details.
+//>>built
+define(["exports","./componentsUtils"],function(b,g){function f(a){(a=a.parentElement?.closest("calcite-list-item"))&&(a.open=!0,f(a))}b.a=f;b.c="calcite-list";b.d=function(a){return"CALCITE-LIST-ITEM"===a.tagName};b.f=function(a){a=a.assignedElements({flatten:!0});const d=a.filter(c=>c?.matches("calcite-list-item-group")).map(c=>Array.from(c.querySelectorAll("calcite-list-item"))).flat(),e=a.filter(c=>c?.matches("calcite-list-item"));return{lists:a.filter(c=>c?.matches("calcite-list")),items:d.concat(e)}};
+b.h=function(a){const d=a.assignedElements({flatten:!0}).filter(e=>e.matches("calcite-list-item"));d.forEach(e=>{e.setPosition=d.indexOf(e)+1;e.setSize=d.length})};b.i="calcite-list-item";b.o="calcite-list-item-group";b.p=function(a,d=!1){return g.m()?document.evaluate(d?"ancestor::calcite-list-item | ancestor::calcite-list-item-group":"ancestor::calcite-list-item",a,null,XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,null).snapshotLength:0}});
