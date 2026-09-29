@@ -13,18 +13,23 @@ automated investment decision.
 
 ## Questions the product answers
 
-1. **Where is the need?** Identify communities with mapped mobile and
-   terrestrial NBN gaps and significant distance from recorded infrastructure.
-2. **Where could investment create the most impact?** Compare available
-   population evidence now, and later add youth, essential services and
-   community-defined outcomes.
-3. **Where does delivery appear more or less practical?** Use infrastructure
-   proximity as an early context signal, while keeping cost and feasibility
-   explicitly unassessed until engineering evidence exists.
-4. **Which places need resilience attention?** Show relative historical cyclone
-   track exposure as one prompt for stronger design and maintenance planning.
-5. **What must happen next?** Make missing evidence, governance, consent and
-   field validation visible rather than hiding uncertainty inside one score.
+1. **Where is the community need?** Identify mapped mobile, terrestrial NBN and
+   public Wi-Fi gaps, population evidence and distance from recorded
+   infrastructure.
+2. **Where is the greatest benefit potential?** Compare the evidence available
+   now and later add youth demographics, schools, clinics, government access,
+   local economic activity and community-defined outcomes. “Benefit potential”
+   is used instead of “social and economic ROI” until real outcome and financial
+   data exist.
+3. **What delivery factors should be investigated next?** Use proximity to
+   recorded infrastructure, remoteness and cyclone exposure as screening
+   signals while keeping engineering feasibility and cost explicitly unassessed.
+4. **How could the project be funded and sustained?** Surface project overlap,
+   possible grant or co-investment pathways, anchor institutions and the
+   operational evidence still required.
+5. **What community partnership and governance evidence is required?** Identify
+   relevant Land Council, Native Title and administrative context while keeping
+   community support, consent and culturally sensitive data controls explicit.
 
 ## Part 1: prototype we can defend now
 
@@ -40,6 +45,13 @@ The runnable prototype provides:
 - offline-capable static delivery after the first browser load; and
 - transparent methodology and limitation statements in the interface.
 
+The prototype answers:
+
+> **Where should decision-makers investigate connectivity investment first,
+> based on currently available public evidence?**
+
+Its output is a **priority for due diligence**, not an investment recommendation.
+
 The prototype's combined screening score weights connectivity need at 50%,
 population impact at 20%, infrastructure proximity at 15%, and historical
 cyclone exposure at 15%. Missing components are excluded and remaining weights
@@ -48,40 +60,98 @@ stakeholders—not objective truth.
 
 ## Part 2: ambitious future vision
 
-The future platform would add four evidence pillars:
+The future platform answers:
 
-### Community need and benefit
+> **Which connectivity solution would create the greatest sustainable,
+> community-supported benefit, and how could it be delivered and funded?**
 
-Validated service quality and reliability, age profile, schools, clinics,
-government access points, local businesses, community priorities and intended
-social outcomes.
+It would add four evidence pillars.
 
-### Delivery engineering
+### 1. Community Need and Benefit Potential
 
-Fibre points of presence, tower ownership and capacity, line-of-sight and
-terrain, power, backhaul, road access, technology options, supplier estimates,
-CapEx ranges, OpEx ranges and maintainability.
+- **Where is the greatest human need?** Combine connectivity gaps with larger or
+  younger populations and important services such as schools and health clinics.
+- **How severe is the current gap?** Compare mapped mobile, NBN and public Wi-Fi
+  services and distance from recorded infrastructure.
+- **What outcomes could connectivity enable?** Record potential education,
+  healthcare, government-service and local economic benefits.
 
-### Funding and sustainability
+The product should describe these as **benefit potential** until real service,
+outcome and financial data are available.
 
-Current grant eligibility, funded-project overlap, co-location arrangements,
-anchor institutions, demand evidence, ownership models and long-term operating
-responsibility.
+### 2. Delivery Readiness and Cost Drivers
 
-### Community partnership and Country
+- examine distance to towers, radio sites, roads, power and backhaul as factors
+  that may influence deployment cost;
+- identify infrastructure that may warrant investigation for reuse or
+  co-location;
+- include terrain, remoteness and cyclone exposure as construction and
+  maintenance context; and
+- list assumptions that still require engineering and site assessment.
 
-Traditional Owner and Land Council engagement, local governance, Native Title,
-community invitation, consent status, Indigenous data governance, culturally
-sensitive information controls and benefit-sharing arrangements.
+Straight-line distance alone must not be converted into CapEx or treated as
+proof of technical feasibility. Future engineering analysis could compare fibre,
+microwave, mobile, fixed-wireless and satellite scenarios using supplier and
+site-specific data.
+
+A safe delivery-readiness output is:
+
+- Lower apparent delivery complexity;
+- Moderate apparent delivery complexity;
+- Higher apparent delivery complexity; or
+- Insufficient evidence.
+
+### 3. Funding and Operational Sustainability
+
+- identify related projects already funded or planned;
+- surface relevant grant and co-investment opportunities;
+- identify potential anchor institutions such as clinics, schools and council
+  facilities; and
+- show which power, maintenance, demand, staffing, pricing and operational-cost
+  information still needs to be collected.
+
+The platform can identify funding and sustainability opportunities, but it must
+not claim guaranteed revenue or calculate OpEx without the required operating
+evidence.
+
+### 4. Community Partnership, Country and Governance
+
+- identify relevant Native Title, Land Council and administrative boundaries;
+- identify organisations and community representatives that should be engaged;
+- record documented community support or relevant development plans when they
+  exist;
+- show cultural, location-sharing and Indigenous data-governance restrictions;
+  and
+- distinguish established consent from unknown or unassessed consent.
+
+Community governance should shape the project rather than be treated as a
+deployment obstacle. Public mapping may identify relevant boundaries and
+organisations, but it cannot infer Traditional Owner approval.
+
+Each candidate should therefore be able to end with an explainable decision card,
+for example:
+
+> **High community need · High benefit potential · Delivery complexity unknown ·
+> Possible funding overlap · Community support not yet assessed**
 
 ## Decision workflow
 
-**Screen → Validate → Assess → Partner → Deliver → Measure**
+The decision logic is:
 
-Public data can support screening. Community engagement validates need and
-priorities. Engineering and commercial work assesses options. Governance,
-consent and funding establish the partnership. Only then should delivery occur,
-followed by transparent measurement of reliability and community outcomes.
+**Need → Benefit → Delivery readiness → Sustainability → Community mandate → Due diligence priority**
+
+The product progression is:
+
+**Public-data screening → Field validation → Engineering assessment → Community partnership → Funding model → Deployment → Outcome monitoring**
+
+Public data supports screening. Community engagement validates need and
+priorities. Engineering and commercial work assesses technical options and
+costs. Governance, consent and funding establish the partnership. Delivery then
+needs transparent measurement of reliability and community outcomes.
+
+For the competition prototype, the strongest defensible scope is the first two
+pillars, with co-funding and governance shown as structured evidence panels and
+every unknown clearly marked for real-world validation.
 
 ## Guardrails
 

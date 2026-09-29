@@ -1194,80 +1194,103 @@ tbody tr:focus-within {
   line-height: 1.35;
 }
 
-.now-future-grid {
+.vision-bridge {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  padding: 28px 0;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 30px 0;
 }
 
-.now-card,
-.future-card {
-  padding: 24px;
+.bridge-node {
+  min-height: 118px;
+  padding: 20px 22px;
   border: 1px solid var(--line-strong);
   background: #fff;
+  box-shadow: 0 8px 24px rgba(11, 34, 57, 0.06);
 }
 
-.now-card {
+.bridge-node-now {
   border-top: 5px solid var(--forest);
 }
 
-.future-card {
+.bridge-node-future {
   border-top: 5px solid var(--accent);
 }
 
-.now-card h3,
-.future-card h3 {
-  margin-top: 6px;
-  font-size: 24px;
+.bridge-kicker,
+.bridge-node strong,
+.bridge-node > span:last-child {
+  display: block;
 }
 
-.now-card ul,
-.future-card ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 24px;
-  margin: 20px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.now-card li,
-.future-card li {
-  position: relative;
-  padding-left: 17px;
+.bridge-kicker {
   color: var(--muted);
-  font-size: 13px;
-  line-height: 1.4;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.now-card li::before,
-.future-card li::before {
-  position: absolute;
-  top: 3px;
-  left: 0;
-  color: var(--forest);
-  content: "◆";
-  font-size: 8px;
+.bridge-node strong {
+  margin-top: 9px;
+  color: var(--navy);
+  font-size: 24px;
+  line-height: 1.1;
 }
 
-.future-card li::before {
+.bridge-node > span:last-child {
+  margin-top: 13px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.bridge-arrow {
   color: var(--accent);
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .vision-pillars {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid var(--line-strong);
-  border-left: 1px solid var(--line-strong);
+  gap: 14px;
 }
 
-.vision-pillars article {
-  min-height: 260px;
-  padding: 22px;
-  border-right: 1px solid var(--line-strong);
-  border-bottom: 1px solid var(--line-strong);
-  background: rgba(255, 255, 255, 0.86);
+.vision-pillars .pillar-card {
+  min-height: 230px;
+  padding: 20px;
+  border: 1px solid var(--line-strong);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 8px 24px rgba(11, 34, 57, 0.05);
+}
+
+.pillar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pillar-icon {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--navy);
+  background: var(--paper);
+}
+
+.pillar-icon svg {
+  width: 25px;
+  height: 25px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
 }
 
 .pillar-number {
@@ -1278,62 +1301,93 @@ tbody tr:focus-within {
 }
 
 .vision-pillars h3 {
-  margin-top: 52px;
-  font-size: 19px;
-  line-height: 1.2;
+  margin-top: 22px;
+  min-height: 46px;
+  font-size: 20px;
+  line-height: 1.15;
 }
 
-.vision-pillars p {
+.pillar-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 18px;
+}
+
+.pillar-tags span {
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
   color: var(--muted);
-  font-size: 13px;
-  line-height: 1.55;
+  background: var(--paper);
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.1;
 }
 
-.roadmap-section {
+.decision-flow-section {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 210px 1fr;
   gap: 30px;
-  padding: 34px 0 0;
+  align-items: center;
+  padding: 36px 0 0;
 }
 
-.roadmap-section h3 {
+.decision-flow-heading h3 {
   margin-top: 6px;
   font-size: 25px;
 }
 
-.roadmap {
+.decision-flow {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
   margin: 0;
   padding: 0;
-  border-top: 1px solid var(--line-strong);
-  border-left: 1px solid var(--line-strong);
   list-style: none;
 }
 
-.roadmap li {
-  min-height: 130px;
-  padding: 15px;
-  border-right: 1px solid var(--line-strong);
-  border-bottom: 1px solid var(--line-strong);
+.decision-flow li {
+  position: relative;
+  min-height: 94px;
+  padding: 15px 13px;
+  border: 1px solid var(--line-strong);
   background: #fff;
 }
 
-.roadmap strong,
-.roadmap span {
+.decision-flow li:not(:last-child)::after {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: -11px;
+  width: 11px;
+  color: var(--accent);
+  background: var(--paper);
+  content: "→";
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.decision-flow strong,
+.decision-flow span {
   display: block;
 }
 
-.roadmap strong {
-  color: var(--navy);
-  font-size: 13px;
+.decision-flow span {
+  color: var(--accent);
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 10px;
+  font-weight: 700;
 }
 
-.roadmap span {
-  margin-top: 26px;
-  color: var(--muted);
-  font-size: 11px;
-  line-height: 1.4;
+.decision-flow strong {
+  margin-top: 22px;
+  color: var(--navy);
+  font-size: 12px;
+  line-height: 1.25;
 }
 
 .modal-dialog {
@@ -1494,8 +1548,16 @@ tbody tr:focus-within {
     grid-template-columns: 1fr 1fr;
   }
 
-  .roadmap-section {
+  .decision-flow-section {
     grid-template-columns: 1fr;
+  }
+
+  .decision-flow {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .decision-flow li::after {
+    display: none;
   }
 }
 
@@ -1640,8 +1702,7 @@ tbody tr:focus-within {
     padding-top: 28px;
   }
 
-  .vision-hero,
-  .now-future-grid {
+  .vision-hero {
     grid-template-columns: 1fr;
   }
 
@@ -1650,24 +1711,31 @@ tbody tr:focus-within {
     grid-row: auto;
   }
 
-  .now-card ul,
-  .future-card ul {
+  .vision-bridge {
     grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .bridge-arrow {
+    justify-self: center;
+    line-height: 1;
+    transform: rotate(90deg);
   }
 
   .vision-pillars {
     grid-template-columns: 1fr;
   }
 
-  .vision-pillars article {
+  .vision-pillars .pillar-card {
     min-height: 190px;
   }
 
   .vision-pillars h3 {
-    margin-top: 26px;
+    min-height: 0;
+    margin-top: 18px;
   }
 
-  .roadmap {
+  .decision-flow {
     grid-template-columns: 1fr 1fr;
   }
 }

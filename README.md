@@ -26,13 +26,13 @@ The solution should:
 
 ### Problem
 
-Existing public maps are valuable for exploring infrastructure and coverage, but they do not directly answer the investment-screening questions: **Where is the need? Where could investment create the most impact? Where does delivery appear more or less practical?** Decision-makers must manually interpret many layers and can easily overlook uncertainty or treat mapped coverage as proof of real-world service.
+Existing public maps are valuable for exploring infrastructure and coverage, but they do not directly answer the investment-screening questions: **Where is the community need? Where is the greatest benefit potential? What delivery factors should be investigated next?** Decision-makers must manually interpret many layers and can easily overlook uncertainty or treat mapped coverage as proof of real-world service.
 
 ### Approach
 
 The prototype joins the project's community connectivity table, existing EWM priority ranking and BushTel regional/governance fields. It optionally derives a historical cyclone-exposure indicator from the Bureau of Meteorology tropical cyclone best-track dataset. Five switchable lenses—Need, Impact, Delivery context, Resilience and Combined—support regional/profile filters, a filter-aware Top 10, community evidence cards and a comparison shortlist.
 
-The current prototype deliberately uses the phrase **delivery context**, not feasibility: distance to mapped infrastructure is useful for screening but cannot estimate CapEx, access, capacity, terrain constraints or permission to co-locate. The interface keeps these validation requirements visible.
+The prototype produces a **priority for due diligence**, not an investment recommendation. It deliberately uses the phrase **delivery context**, not feasibility: distance to mapped infrastructure is useful for screening but cannot estimate CapEx, access, capacity, terrain constraints or permission to co-locate. A community being 40 km from a tower does not by itself show whether fibre, microwave, mobile, fixed-wireless or satellite deployment is technically or commercially viable. The interface keeps these validation requirements visible.
 
 ### Key findings
 
@@ -43,7 +43,9 @@ The current prototype deliberately uses the phrase **delivery context**, not fea
 
 ### Recommendations
 
-Use ConnectNT to create a transparent investigation shortlist, then validate it with communities and current field evidence. The next evidence phase should add measured service reliability, essential facilities, youth demographics, terrain/backhaul/power, funded-project overlap, costs and community-defined priorities. No ranking should be treated as community consent or an automatic investment decision. See [the product vision](docs/PRODUCT_VISION.md) for the staged roadmap and guardrails.
+Use ConnectNT to create a transparent investigation shortlist, then validate it with communities and current field evidence. The next evidence phase should add measured service reliability, essential facilities, youth demographics, terrain/backhaul/power, funded-project overlap, costs and community-defined priorities. No ranking should be treated as community consent or an automatic investment decision.
+
+The longer-term decision flow is **Need → Benefit → Delivery readiness → Sustainability → Community mandate → Due diligence priority**. A candidate should finish with an explainable decision card such as: **High community need · High benefit potential · Delivery complexity unknown · Possible funding overlap · Community support not yet assessed.** See [the product vision](docs/PRODUCT_VISION.md) for the staged roadmap and guardrails.
 
 ## Suggested data and tools
 
