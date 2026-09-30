@@ -4,9 +4,9 @@
 
 This repository is for our submission to the [CDU IT Code Fair 2026 Data Innovation Challenge](https://itcodefair.cdu.edu.au/data-innovation-challenge/).
 
-Remote communities across Australia often experience limited or unreliable internet and mobile coverage. These connectivity gaps restrict access to education, healthcare, government support, and other essential digital services. This project will use data to identify and explain those gaps and develop a practical solution that remains useful in low-connectivity or offline settings.
+Remote communities across Australia often experience limited or unreliable internet and mobile coverage. These connectivity gaps restrict access to education, healthcare, government support, and other essential digital services.
 
-> This README currently provides the challenge brief and a reproducibility template. Replace the marked placeholders as the project develops.
+Our response is **ConnectNT Investment Lens**: an offline-capable, map-first screening layer that helps users move from viewing many government data layers to forming a transparent, evidence-based shortlist for further investigation. It complements the Australian Government's First Nations Connectivity Mapping Tool rather than reproducing it.
 
 ## Challenge objectives
 
@@ -20,25 +20,32 @@ The solution should:
 
 ## Our solution
 
-**Project name:**   
+**Project name:** ConnectNT Investment Lens
 **Team number:**   
 **Team members and roles:** 
 
 ### Problem
 
-_Describe the specific connectivity problem or geographic area the team is investigating._
+Existing public maps are valuable for exploring infrastructure and coverage, but they do not directly answer the investment-screening questions: **Where is the community need? Where is the greatest benefit potential? What delivery factors should be investigated next?** Decision-makers must manually interpret many layers and can easily overlook uncertainty or treat mapped coverage as proof of real-world service.
 
 ### Approach
 
-_Summarise the datasets, analysis methods, visualisations, and prototype._
+The prototype joins the project's community connectivity table, existing EWM priority ranking and BushTel regional/governance fields. It optionally derives a historical cyclone-exposure indicator from the Bureau of Meteorology tropical cyclone best-track dataset. Five switchable lenses—Need, Impact, Delivery context, Resilience and Combined—support regional/profile filters, a filter-aware Top 10, community evidence cards and a comparison shortlist.
+
+The prototype produces a **priority for due diligence**, not an investment recommendation. It deliberately uses the phrase **delivery context**, not feasibility: distance to mapped infrastructure is useful for screening but cannot estimate CapEx, access, capacity, terrain constraints or permission to co-locate. A community being 40 km from a tower does not by itself show whether fibre, microwave, mobile, fixed-wireless or satellite deployment is technically or commercially viable. The interface keeps these validation requirements visible.
 
 ### Key findings
 
-_Add the most important findings and supporting evidence._
+- 792 NT communities are represented in the current processed dataset.
+- 442 have neither mapped mobile coverage nor mapped terrestrial NBN coverage in the source fields.
+- Population is unknown for 324 communities, so any population-based impact ranking is explicitly incomplete.
+- Infrastructure proximity and historical cyclone exposure can help organise due diligence, but neither proves build feasibility, service reliability or financial return.
 
 ### Recommendations
 
-_Add practical recommendations for community, government, or industry stakeholders._
+Use ConnectNT to create a transparent investigation shortlist, then validate it with communities and current field evidence. The next evidence phase should add measured service reliability, essential facilities, youth demographics, terrain/backhaul/power, funded-project overlap, costs and community-defined priorities. No ranking should be treated as community consent or an automatic investment decision.
+
+The longer-term decision flow is **Need → Benefit → Delivery readiness → Sustainability → Community mandate → Due diligence priority**. A candidate should finish with an explainable decision card such as: **High community need · High benefit potential · Delivery complexity unknown · Possible funding overlap · Community support not yet assessed.** See [the product vision](docs/PRODUCT_VISION.md) for the staged roadmap and guardrails.
 
 ## Suggested data and tools
 
@@ -58,19 +65,22 @@ Python, data-analysis and AI/ML libraries, public APIs, and mapping or visualisa
 
 ## Repository structure
 
-The following structure is recommended and can be adapted to the final solution:
-
 ```text
 .
-|-- data/
-|   |-- raw/              # Original data (or download instructions)
-|   `-- processed/        # Cleaned and derived data
-|-- notebooks/            # Exploratory analysis
-|-- src/                  # Reusable Python source code
-|-- prototype/            # Interactive or offline-first prototype
-|-- reports/              # Final report and presentation
-|-- requirements.txt      # Pinned Python dependencies
-|-- .env.example          # Required variable names, without secrets
+|-- Code/                  # Existing notebooks and analysis scripts
+|-- Raw_Data/              # Original public source extracts
+|-- Processed_Data/        # Intermediate outputs
+|-- Result/                # Joined connectivity and ranking outputs
+|-- src/
+|   `-- build_prototype_data.py
+|-- prototype/             # Offline-capable browser prototype
+|   |-- data/communities.js
+|   |-- index.html
+|   |-- app.js
+|   |-- styles.css
+|   `-- serve.py
+|-- docs/PRODUCT_VISION.md
+|-- requirements.txt      # No third-party runtime dependencies
 `-- README.md
 ```
 
@@ -78,13 +88,11 @@ Do not commit confidential data, credentials, or restricted datasets. If source 
 
 ## Reproducing the project
 
-The final submission must include reproducible instructions. Update the commands and paths below to match the implementation.
-
 ### Prerequisites
 
-- Python _version to be added_
-- Git
-- _Any additional software or account requirements_
+- Python 3.11 or newer
+- A modern web browser
+- Internet access only when refreshing the optional BOM cyclone source
 
 ### Setup
 
@@ -104,37 +112,27 @@ Activate the environment:
 source .venv/bin/activate
 ```
 
-Install dependencies:
+No third-party packages are required. The requirements file is intentionally empty except for documentation:
 
 ```bash
-python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-### Data preparation
-
-1. _List each dataset and its official download URL._
-2. _Explain where each downloaded file must be placed._
-3. _Document any required API keys in `.env.example`._
-4. _Add the command used to clean or combine the data._
+### Build the browser dataset
 
 ```bash
-python <data-preparation-script>
+python src/build_prototype_data.py --download-cyclones
 ```
 
-### Run the analysis
-
-```bash
-python <analysis-script>
-```
+The command uses the checked-in CSV inputs and refreshes the official Bureau of Meteorology cyclone-track cache. To build offline from an existing cache—or leave cyclone evidence unassessed when no cache exists—omit `--download-cyclones`.
 
 ### Run the prototype
 
 ```bash
-python <prototype-entry-point>
+python prototype/serve.py --open
 ```
 
-_Add the local address, expected outputs, offline-use instructions, and troubleshooting notes._
+Open `http://127.0.0.1:8000/` if the browser does not open automatically. The prototype is static and its core files are cached after the first complete browser load. Use `Ctrl+C` to stop the local server.
 
 ## Ethics, culture, and community
 
@@ -208,6 +206,7 @@ Teams must contain two to four enrolled CDU IT coursework students from undergra
 - [Challenge overview](https://itcodefair.cdu.edu.au/data-innovation-challenge/)
 - [Datasets and development resources](https://itcodefair.cdu.edu.au/datasciencechalllenge_datasets/)
 - [Report requirements](https://itcodefair.cdu.edu.au/data-innovation-challenge-requirement/)
+- https://spatial.infrastructure.gov.au/portal/apps/experiencebuilder/experience/?id=81c5ae65fbf74ce3a89cf25b1f323d50&page=Page
 
 ## Licence
 

@@ -1,0 +1,9 @@
+,Missing,Missing_Percent,Unique_Values,Variance
+mobile_need,0,0.0,2,0.24693841065522482
+mobile_4g_need,0,0.0,2,0.2467899602855355
+mobile_5g_need,0,0.0,2,0.06251995300667866
+nbn_need,0,0.0,2,0.03765691044452106
+nearest_mobile_site_distance_km,0,0.0,723,761.844303777184
+distance_community_to_tower_km,0,0.0,546,148.38339017928973
+distance_community_to_wifi_km,0,0.0,775,10724.14499921848
+population_final,324,40.91,144,106148.47982210507

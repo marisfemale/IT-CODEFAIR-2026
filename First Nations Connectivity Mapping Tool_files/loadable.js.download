@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.32/esri/copyright.txt for details.
+//>>built
+define(["exports","./componentsUtils"],function(b,c){b.r=async function(a){if(await a.componentOnReady(),c.m())return a.requestUpdate(),new Promise(d=>requestAnimationFrame(()=>d()))};b.t=async function(a){await a.componentOnReady()}});

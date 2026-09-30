@@ -19,6 +19,22 @@ Geographic boundary and location data for Indigenous Locations in the Northern T
 
 Source: https://spatial.infrastructure.gov.au/portal/home/item.html?id=29918b8b3c764d8d9de643ef6cc96b38
 
+### 3. Bureau of Meteorology tropical cyclone tracks
+
+The prototype data build can download the Bureau of Meteorology historical
+tropical cyclone best-track CSV. The raw download is cached locally under
+`.cache/` and is not committed. ConnectNT uses tropical-cyclone observations
+from 1970 onward to count unique historical tracks within 100 km and 200 km of
+each community and calculate a relative exposure indicator.
+
+Sources:
+
+- https://www.bom.gov.au/cyclone/history/
+- https://www.bom.gov.au/clim_data/IDCKMSTM0S.csv
+
+Historical track proximity is not a forecast, outage model or site-specific
+engineering risk assessment.
+
 ## Data Use
 
 The datasets were combined to identify Indigenous Locations and population information for spatial analysis of remote community connectivity in the Northern Territory.

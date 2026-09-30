@@ -1,0 +1,793 @@
+community_id,community_name,population_final,population_status
+1022,10 MILE,8.0,Population available
+1004,10 MILE OUTSTATION,10.0,Population available
+783,16 MILE CAMP,,Population unavailable
+24993,20 MILE,6.0,Population available
+1006,4 MILE CAMP,7.0,Population available
+759,5 MILE BORE,24.0,Population available
+279,ACACIA LARRAKIA,799.0,Population available
+979,ADBANAE,,Population unavailable
+1,ADELAIDE BORE,14.0,Population available
+10153,ADELAIDE RIVER,,Population unavailable
+895,ADJAMARRAGU,,Population unavailable
+787,AKARNENEHE WELL,,Population unavailable
+3,AKNGWERTNARRE,,Population unavailable
+959,AKWALIRRUMANJA,35.0,Population available
+280,ALAMIRRA,4.0,Population available
+693,ALATYEYE,3.0,Population available
+441,ALHARRGAN,6.0,Population available
+202,ALI CURUNG,463.0,Population available
+10219,ALICE SPRINGS,,Population unavailable
+852,ALICE WELL,6.0,Population available
+4,ALKIPI,,Population unavailable
+769,ALKNGARRIINTJA,8.0,Population available
+714,ALKUPTIJA,31.0,Population available
+7,ALPARA,,Population unavailable
+203,ALPURRURULAM,411.0,Population available
+10270,ALYANGULA,751.0,Population available
+24991,ALYARPERE,4.0,Population available
+442,ALYINGBERRMA,,Population unavailable
+2,ALYUEN,12.0,Population available
+622,AMANBIDJI,88.0,Population available
+445,AMANBURNUNGA,,Population unavailable
+427,AMANGAL INDIGENOUS VILLAGE,,Population unavailable
+282,AMATJATPALK,,Population unavailable
+104,AMENGERNTERNEAH,,Population unavailable
+446,AMIRRABA,,Population unavailable
+9,AMOONGUNA,269.0,Population available
+10,AMPILATWATJA,515.0,Population available
+11,AMPUTJUTA,,Population unavailable
+761,AMUNDURNGUA,10.0,Population available
+449,ANDANANGKI,10.0,Population available
+13,ANGAS DOWNS,2.0,Population available
+916,ANGATYEPE,21.0,Population available
+917,ANGKERLE ARRENGE (A),16.0,Population available
+918,ANGKERLE ARRENGE (B),3.0,Population available
+12,ANGULA,6.0,Population available
+451,ANGURUGU,1037.0,Population available
+960,ANGWURA,8.0,Population available
+285,ANKABADBIRRI,18.0,Population available
+170,ANKERRAPW,,Population unavailable
+823,ANKWELEYELENGKWE,6.0,Population available
+1021,ANNERRE,,Population unavailable
+14,ANNINGIE,,Population unavailable
+788,ANTERE,,Population unavailable
+16,ANTHELK EWLPAYE,122.0,Population available
+17,ANTHEPE,,Population unavailable
+19,APER ALWERRKNGE,,Population unavailable
+335,ARARLAGU,,Population unavailable
+288,ARARU POINT,7.0,Population available
+147,ARAWERR,129.0,Population available
+20,AREYONGA,277.0,Population available
+1023,ARKANTA,12.0,Population available
+168,ARLPARRA,110.0,Population available
+968,ARMORRAN,8.0,Population available
+79,ARMSTRONGS,5.0,Population available
+735,ARRAWAJIN,,Population unavailable
+893,ARRGAMURRMUR,,Population unavailable
+919,ARRILLHJERE,2.0,Population available
+21,ARRKAPA,2.0,Population available
+910,ARRUNGKEE,10.0,Population available
+22,ARTEKERR,26.0,Population available
+712,ARTEKERRE,51.0,Population available
+729,ATHELEY,88.0,Population available
+42,ATITJERE,239.0,Population available
+1015,ATJI CREEK,10.0,Population available
+146,ATNARARA,47.0,Population available
+24995,ATNARPA,8.0,Population available
+27,ATNELTYEY,51.0,Population available
+23,ATNWENGERRPE,30.0,Population available
+754,AWUMBUNYJI,,Population unavailable
+1011,BABUNGI,8.0,Population available
+577,BADAWARRKA,3.0,Population available
+811,BAGHETTI,2.0,Population available
+290,BAGOT,,Population unavailable
+209,BAJAMINYI,,Population unavailable
+456,BALMA,11.0,Population available
+578,BAMBOO SPRINGS,,Population unavailable
+946,BANATJARL,10.0,Population available
+458,BANIYALA,146.0,Population available
+457,BANTHULA,24.0,Population available
+865,BARDALUMBA,26.0,Population available
+14045564,BARNJARN,8.0,Population available
+699,BARRAK BARRAK,,Population unavailable
+579,BARRAPUNTA,1.0,Population available
+938,BARRARATJPI,23.0,Population available
+792,BARRIDJOWKENG,2.0,Population available
+888,BARRKIRA,13.0,Population available
+580,BARUNGA,396.0,Population available
+10677,BATCHELOR,371.0,Population available
+25070,BATTON HILL,2.0,Population available
+212,BAUHINIA DOWNS,11.0,Population available
+462,BAWAKA,9.0,Population available
+494,BAYAGIDA,,Population unavailable
+463,BAYGURRTJI,2.0,Population available
+25071,BEASLEY KNOB,19.0,Population available
+844,BEER ST BORE,,Population unavailable
+294,BELYUEN,175.0,Population available
+295,BERRAJA,,Population unavailable
+582,BINJARI,282.0,Population available
+464,BIRANY BIRANY,16.0,Population available
+810,BISHOPS BORE,,Population unavailable
+24899,BLACK ROCK LANDING,4.0,Population available
+784,BLACKTANK BORE,18.0,Population available
+25,BLACKWATER,9.0,Population available
+843,BLOODWOOD BORE,,Population unavailable
+829,BLUE BUSH,,Population unavailable
+698,BOBS YARD,,Population unavailable
+465,BODIA,44.0,Population available
+298,BOLKDJAM,50.0,Population available
+583,BOOMERANG LAGOON,,Population unavailable
+481,BOROGOMARRA,,Population unavailable
+11092,BORROLOOLA,886.0,Population available
+24904,BRUMBY PLAINS,8.0,Population available
+585,BUBBLE BUBBLE,10.0,Population available
+700,BUCKET SPRINGS,,Population unavailable
+986,BUDJANGA,8.0,Population available
+1027,BUFFALO FARM,6.0,Population available
+257,BUJAN,4.0,Population available
+466,BUKUDAL,16.0,Population available
+467,BULARRING,,Population unavailable
+300,BULGUL,21.0,Population available
+586,BULLA,95.0,Population available
+587,BULMAN,190.0,Population available
+302,BULUHKADURU,32.0,Population available
+468,BUNDATHARRI,,Population unavailable
+949,BUNHANURA,15.0,Population available
+976,BUNI-INWUNBULUK,10.0,Population available
+470,BURRUM,13.0,Population available
+686,BURRUMBURRU,,Population unavailable
+713,BURT CREEK,37.0,Population available
+944,BURTA WURTA,,Population unavailable
+1019,BURUDU,4.0,Population available
+24994,BUSHCAMP,,Population unavailable
+803,BUYMARR,6.0,Population available
+728,CAMEL CAMP,39.0,Population available
+768,CAMELS HUMP,3.0,Population available
+304,CANNON HILL,8.0,Population available
+219,CANTEEN CREEK,173.0,Population available
+11623,CATTLE CREEK,,Population unavailable
+846,CHARLOTTE WATERS,,Population unavailable
+757,CHILLA WELL,,Population unavailable
+779,CHULUK,,Population unavailable
+1012,CONDER POINT,8.0,Population available
+901,CONNELLS LAGOON,,Population unavailable
+220,CORELLA CREEK,30.0,Population available
+1009,CORKWOOD BORE,36.0,Population available
+590,COSTELLO,2.0,Population available
+972,COW LAGOON,6.0,Population available
+24901,CRABHOLE,2.0,Population available
+591,DAGURAGU,230.0,Population available
+956,DALIWUY BAY,,Population unavailable
+12194,DALY WATERS,,Population unavailable
+307,DAMDAM,,Population unavailable
+1003,DARRANDARRA,,Population unavailable
+472,DARRANGMURMANJA,,Population unavailable
+12218,DARWIN,,Population unavailable
+775,DELEYE,31.0,Population available
+473,DHALINYBUY,117.0,Population available
+896,DHAMBALA,14.0,Population available
+812,DOOLGARINA,,Population unavailable
+475,DHAMIYAKA,2.0,Population available
+955,DHANIYA,9.0,Population available
+805,DHARAWA,,Population unavailable
+476,DHARRNI,,Population unavailable
+806,DHAYIRRI,6.0,Population available
+477,DHIPIRRINJURA,18.0,Population available
+478,DHOLTJI,,Population unavailable
+664,DHUDUPU,4.0,Population available
+954,DHULMULMIYA,,Population unavailable
+479,DHUPUWAMIRRI,6.0,Population available
+554,DHURUPUTJPI,12.0,Population available
+819,DILLINYA,,Population unavailable
+310,DITCHI,,Population unavailable
+482,DJARRAKPI,29.0,Population available
+670,DJARRUNG,2.0,Population available
+965,DJINKARR,10.0,Population available
+981,DJIRRBIYAK,30.0,Population available
+484,DJURRANALPI,1.0,Population available
+46,DONS BORE,8.0,Population available
+485,DONYDJI,39.0,Population available
+942,DOOJUM,,Population unavailable
+24897,DOUBLE D,1.0,Population available
+631,DUCK PONDS,,Population unavailable
+879,EAGLE VALLEY,,Population unavailable
+34,EIGHT MILE,,Population unavailable
+920,ELITJIA,16.0,Population available
+12641,ELLIOTT,337.0,Population available
+225,ELLIOTT NORTH CAMP,,Population unavailable
+224,ELLIOTT SOUTH CAMP,,Population unavailable
+882,EMU POINT,85.0,Population available
+33,ENGAWALA,193.0,Population available
+35,EWYENPER ATWATYE,,Population unavailable
+36,FINKE,224.0,Population available
+950,FITZROY STATION,12.0,Population available
+57,FIVE MILE,3.0,Population available
+12769,FIVE MILE,,Population unavailable
+685,FLICKS HOLE,,Population unavailable
+911,FOSSIL HEAD,34.0,Population available
+909,FOXALLS WELL,8.0,Population available
+496,GALARU,,Population unavailable
+807,GALAWARRA,4.0,Population available
+489,GALAWDJAPIN,12.0,Population available
+492,GALIWINKU,2582.0,Population available
+495,GALUPA,,Population unavailable
+315,GAMARDI,55.0,Population available
+316,GAMARGAWAN,12.0,Population available
+498,GAN GAN,78.0,Population available
+1024,GANIYARRANG,,Population unavailable
+499,GANPURA,5.0,Population available
+500,GAPUWIYAK,828.0,Population available
+963,GARANYDJIRR,8.0,Population available
+229,GARAWA 1,,Population unavailable
+992,GARAWA 2,,Population unavailable
+993,GARRINJINNY,8.0,Population available
+504,GARRIYAK,,Population unavailable
+505,GARRTHALALA,54.0,Population available
+507,GATJI,4.0,Population available
+508,GAWA,19.0,Population available
+509,GIKAL,,Population unavailable
+38,GILBERT SPRINGS,,Population unavailable
+490,GILIRRI,,Population unavailable
+597,GILWI,86.0,Population available
+945,GIMBAT,,Population unavailable
+510,GITAN,,Population unavailable
+319,GOCHAN JINY JIRRA,33.0,Population available
+669,GONGURUWUY,,Population unavailable
+723,GOOLMINYINI,29.0,Population available
+596,GORPULYUL,,Population unavailable
+321,GORRONG-GORRONG,6.0,Population available
+44,GREEN VALLEY,2.0,Population available
+740,GUDJEKBIN,,Population unavailable
+741,GUL GUL,,Population unavailable
+24905,GULARDI,14.0,Population available
+512,GULMARRI,5.0,Population available
+867,GULNGARRING,,Population unavailable
+204,GULUNGURU,,Population unavailable
+328,GUMARRIRNBANG,31.0,Population available
+308,GUMERAGI,7.0,Population available
+691,GUMULUJI,,Population unavailable
+497,GUMURUGURU,,Population unavailable
+329,GUNBALANYA,1354.0,Population available
+514,GUNYANGARA,283.0,Population available
+330,GUPANGA,,Population unavailable
+516,GURKAWUY,9.0,Population available
+331,GURRGURR,,Population unavailable
+517,GURRUMURU,44.0,Population available
+804,GUTJANGAN,37.0,Population available
+41,HAASTS BLUFF,96.0,Population available
+845,HALFWAY CAMP,,Population unavailable
+903,HATCHES CREEK,1.0,Population available
+1028,HAWK DREAMING,4.0,Population available
+43,HERMANNSBURG,647.0,Population available
+973,HINGSTONS PLACE,6.0,Population available
+600,HODGSON RIVER STATION,,Population unavailable
+13339033,HONEYMOON BORE,2.0,Population available
+675,HOPPYS CAMP,,Population unavailable
+334,HUMPTY DOO,4.0,Population available
+800,HUNTERS CAMP,8.0,Population available
+813,IJARRA,,Population unavailable
+1005,ILEPARRATYE,9.0,Population available
+24990,ILJITJARRI,5.0,Population available
+45,ILKARRALALAMA,2.0,Population available
+737,ILLEUWURRU,,Population unavailable
+709,ILPERLE,3.0,Population available
+48,ILPERLE-TYATHE,,Population unavailable
+676,ILPEYE ILPEYE ESTATE,,Population unavailable
+49,ILPILI,,Population unavailable
+1018,ILPURLA,6.0,Population available
+904,ILUWURRU,,Population unavailable
+50,ILYIPERENYE,,Population unavailable
+250,IMANGARA,79.0,Population available
+51,IMANPA,146.0,Population available
+20926,IMPADNA,,Population unavailable
+961,IMPERRENTH,,Population unavailable
+52,IMPORTNA,4.0,Population available
+90,INARLENGE,,Population unavailable
+932,INBINA ATWATYE,11.0,Population available
+15,INDARINGINYA,41.0,Population available
+54,ININTI,,Population unavailable
+336,INJILATPARRI,,Population unavailable
+55,INJIRRAMURRI,,Population unavailable
+8,INJULKAMA,,Population unavailable
+726,INKAWENYERRE,43.0,Population available
+82,INKWELAYE,31.0,Population available
+56,INTJARTNAMA,16.0,Population available
+59,INYILINGI,,Population unavailable
+771,IPALALA,3.0,Population available
+60,IPOLERA,,Population unavailable
+978,IRGUL POINT,14.0,Population available
+1025,IRKLANCHA ATWACHA,,Population unavailable
+826,IRON STONE,,Population unavailable
+703,IRRERLIRRE,40.0,Population available
+921,IRRILTYERE (A),9.0,Population available
+922,IRRILTYERE (B),10.0,Population available
+853,IRRMARNE,,Population unavailable
+24989,IRROWA,9.0,Population available
+63,IRRULTJA,45.0,Population available
+935,ITCHY KOO PARK,52.0,Population available
+923,ITEYEPINTYE,25.0,Population available
+924,ITPERLYENGE,23.0,Population available
+64,ITWIYETHWENGE,,Population unavailable
+65,IWUPATAKA,,Population unavailable
+727,IYLENTYE,33.0,Population available
+13836,JABIRU,886.0,Population available
+704,JANGIRULU,,Population unavailable
+234,JARRA JARRA,,Population unavailable
+966,JARRAMAGORNDARRA,,Population unavailable
+824,JEMELKE,10.0,Population available
+338,JI-BALBAL,12.0,Population available
+311,JI-BENA,29.0,Population available
+793,JI-MALAWA,50.0,Population available
+340,JI-MARDA,55.0,Population available
+593,JILKMINGGAN,309.0,Population available
+261,JILUNDARINA,,Population unavailable
+989,JIMILAYA,,Population unavailable
+235,JINGALOO,,Population unavailable
+646,JIWARANPA,,Population unavailable
+598,JODETLUK,21.0,Population available
+710,JOMET (URPALARWN),,Population unavailable
+602,JOWAR,,Population unavailable
+695,JUNGARRAYI WARRNU,,Population unavailable
+734,JUNKAJI,,Population unavailable
+794,KABALYARRA,15.0,Population available
+1007,KABULWARNAMYO,4.0,Population available
+326,KAKODBABULDI,20.0,Population available
+736,KALINJARRI,,Population unavailable
+603,KALKARINDJI,450.0,Population available
+947,KALPITAPTA,,Population unavailable
+66,KALTUKATJARA,269.0,Population available
+941,KALUMBULANI,,Population unavailable
+236,KALUMPURLPA,,Population unavailable
+237,KANGAROO ISLAND,10.0,Population available
+980,KAPALGA,10.0,Population available
+67,KAPORILYA,9.0,Population available
+238,KARGARU,75.0,Population available
+69,KARNTE,,Population unavailable
+116,KARRINYARRA,,Population unavailable
+14071,KATHERINE,,Population unavailable
+870,KATJUTARI,4.0,Population available
+883,KELERRK,,Population unavailable
+1017,KEWULYI,16.0,Population available
+722,KIANA,15.0,Population available
+72,KINTORE,493.0,Population available
+344,KNUCKEY LAGOON INDIGENOUS VILLAGE,,Population unavailable
+345,KOLORBIDAHDAH,14.0,Population available
+912,KUBUYIRR,,Population unavailable
+936,KUDANTIGA,9.0,Population available
+347,KULALUK,39.0,Population available
+747,KULANG,,Population unavailable
+14240,KULGERA,,Population unavailable
+76,KULPITHARRA,2.0,Population available
+351,KULTCHILL,,Population unavailable
+1000,KUMUNU,,Population unavailable
+967,KUMURRULU,15.0,Population available
+77,KUNAPULA,,Population unavailable
+239,KUNAYUNGKU,,Population unavailable
+391,KUNGARREWARL,4.0,Population available
+78,KUNGKAYUNTI,,Population unavailable
+1029,KUNOTH,,Population unavailable
+14262,KURINELLI,,Population unavailable
+110,KURIPPI,,Population unavailable
+81,KURKUTJARA,,Population unavailable
+905,KURNTAPURRA,24.0,Population available
+822,KURRAYA,1.0,Population available
+753,KURRURLDUL,,Population unavailable
+776,KUWUMA,1.0,Population available
+718,KUY,29.0,Population available
+83,KWALA,4.0,Population available
+925,KWALE KWALE,21.0,Population available
+777,KWOMBOM,,Population unavailable
+608,KYBROOK FARM,,Population unavailable
+85,LABRAPUNTJA,9.0,Population available
+609,LAJAMANU,767.0,Population available
+833,LAKE KATHERINE,,Population unavailable
+519,LANGARRA,23.0,Population available
+86,LARAMBA,222.0,Population available
+87,LARAPINTA VALLEY,,Population unavailable
+14359,LARRIMAH,,Population unavailable
+696,LARRPAYANJI,,Population unavailable
+1008,LEICHARDT,,Population unavailable
+820,LIJA MUKUMPARLA,,Population unavailable
+721,LIKKAPARTA,1.0,Population available
+610,LIKU,,Population unavailable
+88,LILLA,9.0,Population available
+93,LILTJERA,6.0,Population available
+24996,LILY HOLE,6.0,Population available
+613,LINGARA,46.0,Population available
+91,LITTLE WELL,6.0,Population available
+856,LIZARD BORE,,Population unavailable
+92,LTIRA,16.0,Population available
+614,LUL-TJU,,Population unavailable
+871,LUNTHARRA,1.0,Population available
+94,LYILYALANAMA,3.0,Population available
+28,MALA,,Population unavailable
+376,MALGAWA,12.0,Population available
+522,MALKALA,97.0,Population available
+851,MALLARRAMI,9.0,Population available
+523,MALNJANGARNAK,9.0,Population available
+355,MAMADAWERRE,75.0,Population available
+694,MAMADI,,Population unavailable
+687,MANABURDURMA,,Population unavailable
+816,MANANGOORA,2.0,Population available
+897,MANDEDJKADJANG,9.0,Population available
+359,MANDILBARRENG,8.0,Population available
+361,MANGARDUBU,,Population unavailable
+362,MANINGRIDA,2956.0,Population available
+360,MANKORLOD,26.0,Population available
+363,MANMOYI,81.0,Population available
+97,MANTAPAYIKA,,Population unavailable
+595,MANYALLALUK,121.0,Population available
+902,MAPERTE,,Population unavailable
+524,MAPURU,81.0,Population available
+222,MARA,202.0,Population available
+618,MARIA LAGOON,,Population unavailable
+828,MARIAH,,Population unavailable
+994,MARINIRI,,Population unavailable
+223,MARLA MARLA,,Population unavailable
+252,MARLINJA,68.0,Population available
+325,MARLWON,,Population unavailable
+619,MARRALUM,18.0,Population available
+894,MARRAMARRANI,,Population unavailable
+527,MARRAYA,,Population unavailable
+899,MARRKALAWA,10.0,Population available
+368,MARRKOLIDJBAN,21.0,Population available
+528,MARTJANBA,,Population unavailable
+529,MATAMATA,7.0,Population available
+23547,MATARANKA,384.0,Population available
+620,MATARANKA TOWN CAMP,,Population unavailable
+530,MAWULYUMANJA,9.0,Population available
+101,MBALKANAKA,2.0,Population available
+102,MBUNGHARA,42.0,Population available
+847,MCDONALDS YARD,,Population unavailable
+951,MENNGEN,43.0,Population available
+872,MERRAL NTARRAKALA,7.0,Population available
+717,MERREPEN,26.0,Population available
+372,MEWIRNBI,40.0,Population available
+621,MIALI BRUMBY,,Population unavailable
+373,MIKGINJ VALLEY,12.0,Population available
+987,MILIBUNTHURRA,4.0,Population available
+374,MILIKAPITI,486.0,Population available
+531,MILINGIMBI,1288.0,Population available
+830,MILMILNGKAN,27.0,Population available
+532,MILYAKBURRA,124.0,Population available
+724,MIMINA,,Population unavailable
+375,MINJILANG,311.0,Population available
+825,MINMARAMA PARK,535.0,Population available
+624,MINYERRI,763.0,Population available
+745,MIRRIDI,,Population unavailable
+535,MIRRNATJA,7.0,Population available
+626,MISTAKE CREEK,,Population unavailable
+536,MIWUL,,Population unavailable
+827,MOBARN,,Population unavailable
+627,MOLE HILL,2.0,Population available
+628,MOMOB,,Population unavailable
+15203,MOOLOOLOO,,Population unavailable
+990,MOOLOOWA,5.0,Population available
+501,MOORONGA,13.0,Population available
+105,MORRIS GAP,,Population unavailable
+106,MOTNAS,3.0,Population available
+109,MOUNT BARKLY,,Population unavailable
+629,MOUNT CATT,12.0,Population available
+957,MOUNT JEAN,,Population unavailable
+112,MOUNT LIEBIG,282.0,Population available
+113,MOUNT NANCY,,Population unavailable
+790,MOUNT PEACHY,4.0,Population available
+875,MOUNT TWELLAR,17.0,Population available
+108,MPWETYERRE,,Population unavailable
+855,MT EAGLEBEAK,24.0,Population available
+702,MT MAIYO,,Population unavailable
+964,MU-GURTA,12.0,Population available
+1001,MUCKATY,,Population unavailable
+380,MUDGINBERRI,40.0,Population available
+808,MUDHAMUL,,Population unavailable
+118,MULGA BORE,46.0,Population available
+971,MULGGAN,,Population unavailable
+538,MULGURRAM,,Population unavailable
+884,MULINGI,8.0,Population available
+382,MUMEKA,,Population unavailable
+630,MUMPUMAMPU,,Population unavailable
+801,MUMUKALA,10.0,Population available
+248,MUNGALAWURRU,15.0,Population available
+244,MUNGKARTA,55.0,Population available
+647,MUNGURRUPA,,Population unavailable
+215,MUNJI-MARLA,,Population unavailable
+249,MUNYALINI,44.0,Population available
+977,MURGENELLA PLAINS,,Population unavailable
+858,MURRANJI,4.0,Population available
+688,MURTULKI,,Population unavailable
+689,MURUN MURULA,,Population unavailable
+648,MURUNING,50.0,Population available
+120,MUTITJULU,348.0,Population available
+764,MUYIN,,Population unavailable
+678,MYATT,12.0,Population available
+395,NABARLEK,,Population unavailable
+887,NABBARLA KUNINDABBA,,Population unavailable
+886,NADILMUK,5.0,Population available
+396,NADIRRI,,Population unavailable
+541,NALIYINDI,,Population unavailable
+1026,NAMA,28.0,Population available
+906,NAMERINNI,,Population unavailable
+389,NAMUGARDABU,,Population unavailable
+392,NANGAK,14.0,Population available
+393,NANGU,,Population unavailable
+543,NANYINGBURRA,7.0,Population available
+974,NAPAGUNPA,,Population unavailable
+873,NATJITNAMA,,Population unavailable
+397,NAUIYU,411.0,Population available
+341,NDJUDDA,,Population unavailable
+716,NEMARLUK,24.0,Population available
+121,NEW BORE,9.0,Population available
+47,NEW ILPARPA,,Population unavailable
+21684,NEWCASTLE WATERS,,Population unavailable
+545,NGADUMIYERRKA,27.0,Population available
+246,NGALPA NGALPA,,Population unavailable
+542,NGANGALALA,44.0,Population available
+16207,NGANGURR,,Population unavailable
+765,NGANKIRITJA,10.0,Population available
+404,NGANMARRIYANGA,427.0,Population available
+731,NGAPPAMILARNU,,Population unavailable
+430,NGARDINITCHI,,Population unavailable
+796,YAMINYI,,Population unavailable
+23746,NGARILIKIRLANGU,,Population unavailable
+913,NGARINTHI,,Population unavailable
+969,NGARLU NGARLU,,Population unavailable
+869,NGARNKA,,Population unavailable
+544,NGAYAWILLI,8.0,Population available
+546,NGILIPITJI,,Population unavailable
+802,NGIPIN,,Population unavailable
+126,NGKWARLERLANEM,,Population unavailable
+633,NGUKURR,1277.0,Population available
+125,NGUMAN,,Population unavailable
+24900,NGUNGA,5.0,Population available
+915,NGUNTHAK,,Population unavailable
+907,NGURRARA,10.0,Population available
+16217,NGURRUTIJI,,Population unavailable
+763,NGUTJUL,,Population unavailable
+839,NGUYARRAMINI,25.0,Population available
+16222,NHULUNBUY,3362.0,Population available
+547,NIKAWU,,Population unavailable
+639,NITJPURRU,142.0,Population available
+814,NORTH ISLAND,,Population unavailable
+770,NTAKARRA,4.0,Population available
+127,NTURIYA,77.0,Population available
+251,NUDJABARRA,,Population unavailable
+632,NULAWAN,4.0,Population available
+549,NUMBULWAR,799.0,Population available
+635,NUMMERLOORI,,Population unavailable
+253,NURADIDGEE,,Population unavailable
+129,NYEWENTE,,Population unavailable
+128,NYIRRIPI,295.0,Population available
+789,OAK VALLEY,4.0,Population available
+914,OLD MISSION,20.0,Population available
+100,OLD STATION,2.0,Population available
+878,OONDALOO,,Population unavailable
+26,ORRTIPA-THURRA,62.0,Population available
+975,PAKULKI,6.0,Population available
+773,PALM PADDOCK,4.0,Population available
+17470,PALMERSTON,,Population unavailable
+403,PALMERSTON INDIGENOUS VILLAGE,65.0,Population available
+369,PANDAYAL,8.0,Population available
+997,PANTHARRPILENHE,4.0,Population available
+854,PANTYINTEME,12.0,Population available
+405,PAPANGALA,12.0,Population available
+131,PAPUNYA,514.0,Population available
+281,PARADISE FARM,12.0,Population available
+638,PARNTA,,Population unavailable
+40,PARRULYU,,Population unavailable
+407,PARU,3.0,Population available
+409,PATONGA (AIRSTRIP),15.0,Population available
+900,PATONGA (HOMESTEAD),10.0,Population available
+926,PAYEPERRENTYE (B),4.0,Population available
+1014,PENYEME,,Population unavailable
+410,PEPPIMENARTI,223.0,Population available
+406,PERREDERR,61.0,Population available
+859,PERTARRATENGE,24.0,Population available
+927,PERTE THERRE,17.0,Population available
+860,PETYALE,3.0,Population available
+133,PHILLIPSON BORE,6.0,Population available
+604,PICININNY BORE,,Population unavailable
+744,PICKERTARAMOOR,,Population unavailable
+17626,PINE CREEK,373.0,Population available
+640,PINE CREEK COMPOUND,,Population unavailable
+134,PINE HILL,,Population unavailable
+255,PINGALA,,Population unavailable
+752,PINJA,,Population unavailable
+136,PINPIRNGA,,Population unavailable
+411,PIRLANGIMPI,372.0,Population available
+138,PMARA JUTUNTA,169.0,Population available
+701,POLICEMANS HOLE,,Population unavailable
+139,PULARDI,40.0,Population available
+730,PUNGALINDUM,33.0,Population available
+840,PUNJARRIJI,,Population unavailable
+140,PUNRITJANTA,,Population unavailable
+732,PURRUKUWURRU,,Population unavailable
+141,PUTA PUTA,,Population unavailable
+1020,PUTJAMIRRA,4.0,Population available
+117,PUTULU,,Population unavailable
+142,PUYURRU,,Population unavailable
+940,PWERTE MARNTE MARNTE,20.0,Population available
+791,PWERTENTYE,,Population unavailable
+412,RAILWAY DAM,,Population unavailable
+550,RAMINGINING,956.0,Population available
+874,RARANGANTJUTA,,Population unavailable
+552,RAYMANGIRR,26.0,Population available
+799,RED LILY,5.0,Population available
+5,RED SANDHILL,3.0,Population available
+414,REDCLIFF,27.0,Population available
+641,RITTARANGU,139.0,Population available
+258,ROBINSON RIVER,211.0,Population available
+642,ROCKHOLE,108.0,Population available
+144,RODNA,,Population unavailable
+469,RORRUWUY,28.0,Population available
+480,RURRANGALA,14.0,Population available
+861,RUTJINGKA,2.0,Population available
+837,SABINA,,Population unavailable
+14153168,SALT BORE,4.0,Population available
+988,SANDRIDGE,16.0,Population available
+892,SANDY BAY,4.0,Population available
+24898,SANDY BORE,6.0,Population available
+145,SANTA TERESA,708.0,Population available
+958,SCOTT POINT,,Population unavailable
+24902,SNAKE LAGOON,6.0,Population available
+948,SNAKE WELL,19.0,Population available
+262,SOUTH WEST ISLAND,10.0,Population available
+953,SPOTTED TIGER,4.0,Population available
+419,SPRING PEAK,25.0,Population available
+18,SUGAR CREEK,,Population unavailable
+1013,TAKAPIMILIYI,2.0,Population available
+264,TARA,73.0,Population available
+424,TARACUMBI,,Population unavailable
+767,TARAWARA,,Population unavailable
+18869,TENNANT CREEK,,Population unavailable
+18964,TI TREE,103.0,Population available
+306,TIGERS CAMP,,Population unavailable
+18974,TIMBER CREEK,326.0,Population available
+891,TIMOR SPRINGS,,Population unavailable
+681,TINKARLI,,Population unavailable
+62,TINKI,,Population unavailable
+148,TITJIKALA,230.0,Population available
+149,TJAMANGKURRA,4.0,Population available
+880,TJAUWATA,,Population unavailable
+762,TJINTIRTJINTIRPA,,Population unavailable
+267,TJOUNGOURI,,Population unavailable
+151,TJULPUNGU,,Population unavailable
+152,TJUNTI,,Population unavailable
+153,TJUNTINANTA,,Population unavailable
+154,TNAWURTA,4.0,Population available
+928,TNERTE,19.0,Population available
+155,TNYIMIPURTA,11.0,Population available
+14153250,TODD RIVER DOWNS,1.0,Population available
+970,TOMMYHAWK SWAMP,4.0,Population available
+30,TOWN BORE,15.0,Population available
+423,TREE POINT,,Population unavailable
+649,TURKEY LAGOON,,Population unavailable
+785,TURNERS CAMP,24.0,Population available
+929,TWETYE (A),12.0,Population available
+930,TWETYE (B),24.0,Population available
+931,TYWENPE (A),20.0,Population available
+933,TYWENPE (C),24.0,Population available
+934,TYWENPE (D),7.0,Population available
+991,UGUIE,,Population unavailable
+159,UKAKA,24.0,Population available
+160,UKATJUPU,,Population unavailable
+760,ULAMBARA,8.0,Population available
+705,ULBULLA,,Population unavailable
+162,ULPANYALI,17.0,Population available
+772,ULPUNDA,11.0,Population available
+1016,ULUPERTE,,Population unavailable
+555,UMBAKUMBA,492.0,Population available
+962,UMINYULUK,8.0,Population available
+662,UN-MARR,,Population unavailable
+711,UNDOOLYA BORE,24.0,Population available
+166,UNDURANA 1C,2.0,Population available
+985,UNDURANA 2A,6.0,Population available
+156,URLAMPE,20.0,Population available
+24992,URRERMERNE,14.0,Population available
+24,UTILY,8.0,Population available
+271,VILLAGE CAMP,,Population unavailable
+815,WADA WADALLA,3.0,Population available
+214,WADA WARRA,17.0,Population available
+426,WADEYE,2259.0,Population available
+381,WAIDABOONAR,,Population unavailable
+14188734,WAJU,,Population unavailable
+908,WAKURLPU,10.0,Population available
+983,WALANGURRMINY,11.0,Population available
+556,WALDNARR,10.0,Population available
+291,WALKA,,Population unavailable
+720,WALKABOUT BORE,23.0,Population available
+750,WALKALBA,,Population unavailable
+174,WALLACE ROCKHOLE,102.0,Population available
+24903,WALLACES LAGOON,3.0,Population available
+606,WALPIRI,,Population unavailable
+748,WALU,,Population unavailable
+176,WALYTJATJATA,,Population unavailable
+428,WAMINARI,,Population unavailable
+890,WANAKUTJA,,Population unavailable
+119,WANARKULA,,Population unavailable
+256,WANDANGULA,39.0,Population available
+557,WANDAWUY,84.0,Population available
+690,WANGALINJI,,Population unavailable
+177,WANGKARI,,Population unavailable
+178,WANMARRA,14.0,Population available
+652,WANMARRI,,Population unavailable
+19471,WARBY,,Population unavailable
+998,WARLPEYANGKRERE,,Population unavailable
+179,WARREN CREEK,6.0,Population available
+429,WARRUWI,507.0,Population available
+180,WARUMPI,6.0,Population available
+877,WATARU,7.0,Population available
+889,WATDAGAWUY,,Population unavailable
+385,WAUK,,Population unavailable
+181,WAYILILINYPA,,Population unavailable
+654,WEEMOL,109.0,Population available
+182,WELERE,6.0,Population available
+183,WELMALA,,Population unavailable
+655,WERENBUN,20.0,Population available
+708,WERRE-THERRE,2.0,Population available
+274,WEST ISLAND,8.0,Population available
+185,WEST WATERHOUSE,10.0,Population available
+431,WIGU,,Population unavailable
+952,WIITIN,7.0,Population available
+432,WILGI,40.0,Population available
+786,WILLIAMS WELL,9.0,Population available
+186,WILLOWRA,261.0,Population available
+187,WILORA,69.0,Population available
+751,WINPARKU,,Population unavailable
+259,WOGYALA,40.0,Population available
+21479,WOLLAGALONNG OUTSTATION,,Population unavailable
+275,WOLLOGORANG,2.0,Population available
+434,WOODYCUPALDIYA,35.0,Population available
+697,WOOLANING,4.0,Population available
+715,WOOLIANA,11.0,Population available
+778,WUDADUK,6.0,Population available
+435,WUDAPULI,54.0,Population available
+581,WUGULARR,636.0,Population available
+995,WULABURRI,,Population unavailable
+838,WULKABIMIRRI,35.0,Population available
+563,WUMAJBARR,8.0,Population available
+937,WUMIRDIN,,Population unavailable
+707,WUNARA,8.0,Population available
+564,WUNBURRI,,Population unavailable
+996,WUNDIGALLA,4.0,Population available
+684,WUPPA,,Population unavailable
+868,WURANKUWU,35.0,Population available
+437,WURDEJA,35.0,Population available
+817,WURLBU,5.0,Population available
+565,WURRUMENBUMANJA,20.0,Population available
+400,WURRUMIYANGA,1668.0,Population available
+548,WURWULA,,Population unavailable
+227,WUTUNUGURRA,168.0,Population available
+567,WUYAGIBA,20.0,Population available
+984,YAKALA,7.0,Population available
+864,YALUKUN,9.0,Population available
+573,YANBAKWA,29.0,Population available
+218,YANGULINYINA,13.0,Population available
+569,YANUNGBI,6.0,Population available
+278,YANYULA,119.0,Population available
+658,YARRALIN,332.0,Population available
+939,YARTALU YARTALU,,Population unavailable
+194,YATEMANS BORE,,Population unavailable
+571,YATHALAMARRA,77.0,Population available
+191,YATJALU,,Population unavailable
+719,YEDERR,,Population unavailable
+572,YEDIKBA,8.0,Population available
+797,YIKARRAKKAL,10.0,Population available
+303,YILAN,30.0,Population available
+898,YILILA,7.0,Population available
+574,YIMIDARRA,15.0,Population available
+659,YINGUWUNARRI,,Population unavailable
+999,YINYIKAY,13.0,Population available
+195,YINYIRIPALANGU,,Population unavailable
+1002,YIRRA BANDOO,,Population unavailable
+575,YIRRINGA,,Population unavailable
+576,YIRRKALA,771.0,Population available
+672,YUDU YUDU,14.0,Population available
+197,YUELAMU,175.0,Population available
+198,YUENDUMU,869.0,Population available
+20026,YULARA,,Population unavailable
+863,YULARA PULKA,5.0,Population available
+1010,YULBARA,,Population unavailable
+200,YUMURRPA,,Population unavailable
+196,YUWALKI,,Population unavailable
+123,YUWERLI,,Population unavailable

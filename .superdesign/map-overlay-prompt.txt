@@ -1,0 +1,42 @@
+Recompose the current ConnectNT Investment Lens desktop design into a map-first investor screening overlay while preserving its technical-minimalist visual system, verified data, ethical language, and analytical transparency.
+
+Use ONLY the design system below for visual and product decisions. Treat the existing draft as content to reorganise, not as a layout to preserve.
+
+LAYOUT AND HIERARCHY
+- Use a 1600 x 1000 desktop viewport.
+- Make an NT-only priority map the continuous working surface beneath a compact 64px header, occupying about 70% of the usable viewport even when panels are open.
+- Keep a compact, collapsible left filter drawer around 270px wide and a collapsible right Top 10 drawer around 370px wide. Both sit over the map rather than creating three equal dashboard columns.
+- Remove the large KPI strip and large need-versus-confidence matrix from the page grid. Replace them with small floating KPI chips and a compact expandable legend/action key on the map.
+- Show the selected community in an anchored detail card or shallow bottom sheet over the map. Do not create a full lower dashboard row.
+
+MAP EXPERIENCE
+- Draw a recognisable Northern Territory silhouette with subtle six-region boundaries, place labels, neutral land, and many community point markers. Do not show an Australia-wide map.
+- Map community points only. Never render an interpolated heatmap or imply values between communities. At the broad view, use restrained clusters where necessary.
+- Encode High, Medium, Low, and Evidence incomplete with colour plus distinct shape and text in the legend: red diamond, amber square, green circle, outlined slate triangle. Show selected community with a double blue ring.
+- Include a compact floating toolbar for Community points / Region summary, Priority, Confidence, Funded projects, basemap, map/table alternative, search, zoom, reset extent, and locate. Show the visible filtered result count.
+- Keep a clear link to the official First Nations Connectivity Mapping Tool for authoritative source-layer exploration; this product should feel like a due-diligence lens, not a clone of government coverage layers.
+
+FILTER DRAWER
+- Include search, NT Government region, community profile/type, population known/unknown/bands, mapped mobile status, mapped terrestrial NBN status, priority tier, evidence confidence, funded-project status, and distance band. Unknown must remain distinct from No.
+- Show active filter chips and Reset all. Use compact, explicit labels and keyboard-friendly controls.
+
+TOP 10 AND SHORTLIST
+- Keep Top 10 priority communities dynamic under active filters and disclose: Sorted by connectivity need, then potential impact when known.
+- Use the real names WALYTJATJATA, MURUN MURULA, KURKUTJARA, JIWARANPA, UKATJUPU, WANGALINJI, MAMADI, DUCK PONDS, MIRRIDI, and BATTON HILL. All are Family Outstations; do not invent scores, costs, ROI, or population values.
+- Each result needs a visible priority shape, confidence badge, one or two short Why drivers, and an Add to shortlist action. Include a persistent Compare shortlist tray for 3–5 communities without hiding the map.
+
+SELECTED COMMUNITY
+- Show BATTON HILL selected in Central Australia with exactly these known fields: Family Outstation; population 2; no mapped mobile; no mapped terrestrial NBN; 141.08 km to nearest recorded mobile site; 214.83 km to nearest recorded WiFi; medium evidence confidence.
+- Clearly separate known mapped facts, derived proximity, unknowns, and next verification questions. Distances are proximity indicators, not feasibility claims.
+- Include View evidence, Add to shortlist, and Open official mapping tool actions.
+
+VERIFIED CONTEXT
+- Present these only as compact context chips: 792 communities screened, 442 with neither mapped mobile nor mapped terrestrial NBN, and 324 with population data missing. Do not invent a number of High-tier communities.
+- Use the persistent disclaimer: Screening result only — confirm coverage, feasibility, community priorities, costs, power, backhaul, and consent before investment decisions.
+- Avoid Australian Government logos or imitation branding. Do not expose exact coordinates or infrastructure identifiers.
+
+VISUAL QUALITY
+- Preserve paper #F7F7F5, navy #0B2239, forest #1A4934, accessible red/amber/green/slate, flat white panels, hairline dividers, square 2–4px corners, Space Grotesk/General Sans/JetBrains Mono character, no gradients or decorative imagery.
+- Build a polished, dense but readable geospatial analysis product. Keep controls aligned, panels scrollable, focus states evident, and labels readable at normal desktop scale.
+
+Success means the map is unquestionably dominant, the Top 10 and evidence detail work as overlays, uncertainty is as visible as priority, and the product remains clearly differentiated from the official coverage viewer.

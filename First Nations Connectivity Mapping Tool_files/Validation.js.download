@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.32/esri/copyright.txt for details.
+//>>built
+define(["exports","./componentsUtils"],function(b,a){b.m=({scale:c,status:d,id:e,icon:f,message:g})=>a.x`<div class=${a.safeClassMap("validation-container")}><calcite-input-message aria-live=polite .icon=${f} id=${e??a.E} .scale=${c} .status=${d}>${g}</calcite-input-message></div>`});

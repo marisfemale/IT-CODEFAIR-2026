@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.32/esri/copyright.txt for details.
+//>>built
+define(["exports","./componentsUtils","./directive-helpers"],function(d,b,e){const g=b.e(class extends b.i$1{constructor(){super(...arguments);this.key=b.E}render(c,a){return this.key=c,a}update(c,[a,f]){return a!==this.key&&(e.m(c),this.key=a),f}});d.i=g});

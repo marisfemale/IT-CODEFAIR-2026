@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.32/esri/copyright.txt for details.
+//>>built
+define(["exports","./componentsUtils","./focusTrapComponent"],function(n,p,k){function l(b,{focusTrapOptions:a},e){return a?.extraContainers||e?[b,...m(a?.extraContainers),...m(e)]:b}function m(b=[]){return Array.isArray(b)?b:[b]}n.F=b=>p.makeGenericController((a,e)=>{let d,h,g;const q=b.focusTrapOptions;e.onConnected(()=>{a[b.triggerProp]&&d&&f.activate()});e.onUpdate(c=>{a.hasUpdated&&c.has("focusTrapDisabled")&&(a.focusTrapDisabled?f.deactivate():f.activate())});e.onDisconnected(()=>f.deactivate());
+const f={activate:()=>{const c=h||a.el;if(c.isConnected){if(!d){const r={...q,...a.focusTrapOptions};g||=l(c,a);d=k.createFocusTrap(g,k.f(c,r))}("function"==typeof a.focusTrapDisabledOverride?a.focusTrapDisabledOverride():a.focusTrapDisabled)||d.activate()}},deactivate:()=>d?.deactivate(),overrideFocusTrapEl:c=>{if(d)throw Error("Focus trap already created");h=c},setExtraContainers:c=>{g=l(h||a.el,a,c)},updateContainerElements:()=>d?.updateContainerElements(g)};return f})});

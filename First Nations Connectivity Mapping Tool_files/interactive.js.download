@@ -1,0 +1,5 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.32/esri/copyright.txt for details.
+//>>built
+define(["exports","./componentsUtils"],function(d,e){function k(){const {disabled:a}=this;a||HTMLElement.prototype.click.call(this)}function f(a){a.target.disabled&&a.preventDefault()}function g(a){a.target.disabled&&(a.stopImmediatePropagation(),a.preventDefault())}function l(a){a.addEventListener("pointerdown",f,c);h.forEach(b=>a.addEventListener(b,g,c))}function m(a){a.removeEventListener("pointerdown",f,c);h.forEach(b=>a.removeEventListener(b,g,c))}const h=["mousedown","mouseup","click"],c={capture:!0};
+d.m=function(a){a.disabled?(a.el.setAttribute("aria-disabled","true"),a.el.contains(document.activeElement)&&document.activeElement.blur(),a.el.click=k,l(a.el)):(delete a.el.click,m(a.el),a.el.removeAttribute("aria-disabled"))};d.p=({children:a,disabled:b})=>e.x`<div class=${e.safeClassMap("interaction-container")} .inert=${b}>${a}</div>`});

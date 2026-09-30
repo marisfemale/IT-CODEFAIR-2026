@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.32/esri/copyright.txt for details.
+//>>built
+define(["exports","./dom"],function(b,c){b.s=function(a){requestAnimationFrame(()=>{a.transitionEl&&c.Ft(a.transitionEl,a.transitionProp,()=>{a[a.openProp||"open"]?a.onBeforeOpen():a.onBeforeClose()},()=>{a[a.openProp||"open"]?a.onOpen():a.onClose()})})}});
