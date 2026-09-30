@@ -1,0 +1,9 @@
+{
+  "name": "Northern Territory Investment Layer",
+  "short_name": "NT Investment Layer",
+  "description": "Offline-capable decision support for remote Northern Territory connectivity.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#eae6df",
+  "theme_color": "#0b2239"
+}

@@ -1,0 +1,19 @@
+Refine the existing dashboard in place. Preserve its strong flat technical-minimalist layout, left filter rail, central NT priority view, matrix, shortlist, and persistent disclaimer, but correct its information architecture and all sample data. This is a structural and factual correction, not a new visual direction.
+
+Header: data vintage must read "Sources: 2021–2025" rather than October 2023. Show all three actions: Methodology, Open official map, Export shortlist. Add a small visible note "Prototype tiers — thresholds pending stakeholder validation."
+
+Left filter rail must include all requested controls and remain scrollable: text search for community; all six NT regions (Greater Darwin, Palmerston and Litchfield; Top End; East Arnhem; Big Rivers; Barkly; Central Australia); exact community types (Major, Minor, Family Outstation, Town Camp, Village, Town, City); Population Available/Unknown plus bands; Mapped Connectivity toggles for no mobile, no 4G, no 5G, no mapped terrestrial NBN; Priority Tier High/Medium/Low; Evidence Confidence High/Medium/Low; active chips and Reset. Do not simplify community types into only two categories.
+
+The four KPI values must use verified repository facts: 792 communities screened; 442 with neither mapped mobile nor mapped terrestrial NBN; 324 with population unknown; 10 in the displayed shortlist. Do not invent regional candidate counts.
+
+The central card title must be "Investment screening layer" and include multiple visible NT community symbols plus map/table toggle, zoom controls, complete legend, and the note "Mapped/public-source screening — not measured service reliability." Keep the map analytical and NT-only rather than recreating the national government layer browser.
+
+The right panel title must be "Top 10 screening candidates" and disclose "Sorted by connectivity need; population breaks ties when known." Use the following real example names from the current connectivity-only result in order: Walytjatjata, Murun Murula, Kurkutjara, Jiwaranpa, Ukatjupu, Wangalinji, Mamadi, Duck Ponds, Mirridi, Batton Hill. Every item must show Priority Tier, Evidence Confidence, two reason chips, and a visible Why? action. Use only defensible reason language such as "No mapped mobile", "No mapped terrestrial NBN", "129 km to recorded mobile site", "Population unknown". Never mention fiber or backhaul because those fields do not exist.
+
+Keep the need-versus-confidence matrix and expand the quadrant labels to "Shortlist for due diligence", "Validate first", "Monitor", and "Data gap". Make clear that confidence controls the next step, not the need score.
+
+The selected-community detail must use Batton Hill as a prototype example and only these repository values: Family Outstation; population 2; no mapped mobile; no mapped terrestrial NBN; 141.08 km to nearest recorded mobile site; 214.83 km to nearest recorded Wi-Fi point. Label it "High screening priority" and "Evidence confidence: Medium — local verification required" without inventing a numeric confidence percentage. Include a transparent factor breakdown and separate lists: What the data indicates; What remains unknown (satellite availability, measured reliability, affordability, cost, power/backhaul feasibility, and community preference); Next step: Due diligence and community verification. Do not show coordinates or infrastructure IDs.
+
+Remove every invented claim from the prior version, including 542 screened, 48 unknown population, 2023-only vintage, Alpurrurulam population 412, terrestrial fiber/backhaul distance, "Extreme" status, and numeric confidence of 88%.
+
+Priority must remain encoded by color, shape, and text. Ensure content fits the 1600x1000 viewport with scrolling inside the filter and shortlist panels where needed. Use ONLY the fonts, colors, spacing, and component styles defined in the design system. Do not introduce any fonts, colors, or visual styles not in the design system.

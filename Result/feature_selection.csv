@@ -1,0 +1,9 @@
+Feature,Decision,Reason
+mobile_need,Selected,Overall mobile coverage gap
+mobile_4g_need,Excluded,Redundant with mobile_need (observed r = 1.00)
+mobile_5g_need,Excluded,Technology-specific rather than overall mobile coverage
+nbn_need,Selected,Overall NBN coverage gap
+nearest_mobile_site_distance_km,Selected,Direct measure of mobile infrastructure proximity
+distance_community_to_tower_km,Excluded,Excluded to avoid overlapping representation of mobile infrastructure proximity
+distance_community_to_wifi_km,Selected,Represents Wi-Fi infrastructure proximity
+population_final,Ranking 2,Used separately to represent potential population impact

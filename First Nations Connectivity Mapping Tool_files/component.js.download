@@ -1,0 +1,4 @@
+// All material copyright Esri, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.32/esri/copyright.txt for details.
+//>>built
+define(["exports","./index7"],function(b,e){b.a=function(a,c,d){a[c]||a[d]||e.m.warn(`[${a.el.localName}] "${c.toString()}" or "${d.toString()}" is required.`)};b.g=function(a){return a.hidden||a.itemHidden};b.s=function(a){return"l"===a?"m":"s"}});
