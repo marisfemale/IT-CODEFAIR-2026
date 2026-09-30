@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Community Connectivity Atlas</title>
+    <meta
+      name="description"
+      content="Explore mobile coverage and infrastructure access across 792 communities in the Northern Territory."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <span class="mark">◉</span> FIELDNOTES
+        <span class="brand-sub">/ CONNECTIVITY ATLAS</span>
+      </div>
+      <span class="region">NORTHERN TERRITORY, AUSTRALIA</span>
+    </header>
+    <main>
+      <section class="intro">
+        <div>
+          <p class="eyebrow">COMMUNITY CONNECTIVITY</p>
+          <h1>A clearer view of the gaps.</h1>
+          <p>
+            Explore coverage and infrastructure access, community by community.
+          </p>
+        </div>
+        <button id="download" class="primary">↓ Export filtered data</button>
+      </section>
+      <div class="view-tabs" role="tablist" aria-label="Dashboard view">
+        <button
+          id="overview-tab"
+          role="tab"
+          aria-selected="true"
+          aria-controls="overview-panel"
+        >
+          Connectivity overview</button
+        ><button
+          id="priority-tab"
+          role="tab"
+          aria-selected="false"
+          aria-controls="priority-panel"
+          tabindex="-1"
+        >
+          Priority rankings
+        </button>
+      </div>
+      <section
+        id="overview-panel"
+        role="tabpanel"
+        aria-labelledby="overview-tab"
+      >
+        <section class="filters" aria-label="Dataset filters">
+          <label class="search"
+            >Find a community<input
+              id="search"
+              type="search"
+              placeholder="Search by name…" /></label
+          ><label
+            >Community type<select id="type">
+              <option value="all">All community types</option>
+            </select></label
+          ><label>Coverage layer<select id="layer"></select></label
+          ><label
+            >Coverage status<select id="status">
+              <option value="all">All communities</option>
+              <option value="Yes">Covered</option>
+              <option value="No">Not covered</option>
+            </select></label
+          ><button id="reset">Reset filters</button>
+        </section>
+        <div id="loading" role="status">Loading community data…</div>
+        <div id="dashboard" hidden>
+          <section class="metrics" id="metrics" aria-live="polite"></section>
+          <section class="visuals">
+            <article class="panel geography">
+              <div class="panel-title">
+                <div>
+                  <p class="eyebrow">01 / GEOGRAPHY</p>
+                  <h2>Communities at a glance</h2>
+                </div>
+                <span id="map-count" class="pill"></span>
+              </div>
+              <div class="legend">
+                <span><i class="dot yes"></i>Covered</span
+                ><span><i class="dot no"></i>Not covered</span
+                ><span class="hint">Select a point to explore</span>
+              </div>
+              <div class="map-wrap">
+                <svg
+                  id="map"
+                  viewBox="0 0 670 420"
+                  tabindex="0"
+                  role="img"
+                  aria-label="Zoomable geographic view of community coverage"
+                  aria-describedby="map-help"
+                ></svg>
+                <div class="map-controls" aria-label="Map zoom controls">
+                  <button id="zoom-in" aria-label="Zoom in" title="Zoom in">
+                    +</button
+                  ><button id="zoom-out" aria-label="Zoom out" title="Zoom out">
+                    −</button
+                  ><button id="zoom-reset" title="Reset map view">
+                    Reset view</button
+                  ><output id="zoom-level" aria-label="Map zoom level"
+                    >1×</output
+                  >
+                </div>
+                <div id="tip" role="status"></div>
+              </div>
+              <p id="map-help" class="footnote">
+                Scroll or pinch to zoom · drag to pan · select a point for
+                details. Keyboard: + / −, arrow keys, Home to reset.
+              </p>
+              <div class="footnote">
+                Geographic point view · equal-sized points · coordinates from
+                dataset
+              </div>
+            </article>
+            <article class="panel providers">
+              <p class="eyebrow">02 / NETWORK REACH</p>
+              <h2>Outdoor mobile coverage</h2>
+              <p class="sub">Share of filtered communities covered</p>
+              <div id="bars"></div>
+              <div class="footnote">
+                Networks overlap: a community may have more than one provider.
+              </div>
+            </article>
+          </section>
+          <section class="lower">
+            <article class="panel">
+              <div class="panel-title">
+                <div>
+                  <p class="eyebrow">03 / INFRASTRUCTURE ACCESS</p>
+                  <h2>Distance to nearest mobile site</h2>
+                </div>
+              </div>
+              <div id="histogram" class="histogram"></div>
+              <p class="footnote">
+                Distance in km · site proximity does not guarantee coverage
+              </p>
+            </article>
+            <article class="panel insight">
+              <p class="eyebrow">READING THIS DATA</p>
+              <h2>Coverage is one part of access.</h2>
+              <p>
+                These flags describe outdoor coverage. They do not measure
+                speed, reliability, affordability or indoor reception.
+              </p>
+              <p id="population-note"></p>
+              <details>
+                <summary>Dataset notes</summary>
+                <p>
+                  Source: your uploaded community connectivity CSV. Nearest
+                  mobile site year is 2025 for all records; no overall
+                  observation date is supplied. Tower distance and mobile site
+                  distance are separate source fields. NBN flags only cover
+                  fixed line and fixed wireless; satellite service is not
+                  recorded.
+                </p>
+              </details>
+            </article>
+          </section>
+          <section class="panel records">
+            <div class="panel-title">
+              <div>
+                <p class="eyebrow">04 / COMMUNITY EXPLORER</p>
+                <h2>Look closer</h2>
+              </div>
+              <label
+                >Sort by<select id="sort">
+                  <option value="name">Community A–Z</option>
+                  <option value="distance">Farthest mobile site</option>
+                  <option value="population">Largest known population</option>
+                </select></label
+              >
+            </div>
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Community</th>
+                    <th>Type</th>
+                    <th>Population</th>
+                    <th id="coverage-heading">Coverage</th>
+                    <th>Mobile site</th>
+                    <th>Wi-Fi distance</th>
+                  </tr>
+                </thead>
+                <tbody id="rows"></tbody>
+              </table>
+            </div>
+            <div class="pagination">
+              <span id="page-label" aria-live="polite"></span>
+              <div>
+                <button id="prev">← Previous</button
+                ><button id="next">Next →</button>
+              </div>
+            </div>
+          </section>
+          <footer>
+            COMMUNITY CONNECTIVITY ATLAS
+            <span
+              >792 source records · Explore locally, export your selection</span
+            >
+          </footer>
+        </div>
+      </section>
+      <section
+        id="priority-panel"
+        role="tabpanel"
+        aria-labelledby="priority-tab"
+        hidden
+      >
+        <div class="priority-heading">
+          <div>
+            <p class="eyebrow">PRIORITY LAB</p>
+            <h2>Explore what changes the ranking.</h2>
+            <p class="sub">
+              Adjust the balance between connectivity need, infrastructure
+              distance and population.
+            </p>
+          </div>
+          <button id="rank-export" class="primary" disabled>
+            ↓ Export scenario
+          </button>
+        </div>
+        <div id="rank-loading" role="status">Loading priority models…</div>
+        <div id="rank-app" hidden>
+          <div class="rank-model-row">
+            <label
+              >Priority model<select id="rank-model">
+                <option value="0">Ranking 1 · Connectivity need</option>
+                <option value="1">Ranking 2 · Connectivity + population</option>
+              </select></label
+            >
+            <p id="rank-scope"></p>
+            <span id="scenario-badge" class="pill">Original EWM weights</span>
+          </div>
+          <div class="priority-layout">
+            <aside class="panel weight-panel">
+              <div class="panel-title">
+                <h2>Factor weights</h2>
+                <span class="pill">Total 100%</span>
+              </div>
+              <p class="sub">
+                Move a slider or enter a percentage. Other weights rebalance
+                proportionally.
+              </p>
+              <div id="weight-controls"></div>
+              <div class="weight-actions">
+                <button id="weights-reset">Restore EWM</button
+                ><button id="weights-equal">Equal weights</button>
+              </div>
+              <p class="footnote">
+                EWM = Entropy Weight Method. The original weights reflect
+                variation in the data, not social importance. Custom weights are
+                an exploratory scenario.
+              </p>
+            </aside>
+            <div class="priority-results">
+              <div
+                id="rank-summary"
+                class="rank-summary"
+                aria-live="polite"
+              ></div>
+              <article class="panel">
+                <div class="panel-title">
+                  <div>
+                    <p class="eyebrow">LIVE PRIORITIES</p>
+                    <h2>Top 10 in your selection</h2>
+                  </div>
+                  <span class="pill">Higher score = higher priority</span>
+                </div>
+                <div id="factor-legend" class="factor-legend"></div>
+                <div id="rank-chart"></div>
+                <p class="footnote">
+                  Bar segments show each factor’s contribution to the score
+                  (0–1). Select a community for its calculation.
+                </p>
+              </article>
+            </div>
+          </div>
+          <section class="panel records rank-records">
+            <div class="panel-title">
+              <div>
+                <p class="eyebrow">RANKING EXPLORER</p>
+                <h2>Compare with the original ranking</h2>
+              </div>
+              <span id="rank-match-count" class="pill"></span>
+            </div>
+            <div class="rank-filters">
+              <label
+                >Find a community<input
+                  id="rank-search"
+                  type="search"
+                  placeholder="Search within this model…" /></label
+              ><label
+                >Community type<select id="rank-type">
+                  <option value="all">All community types</option>
+                </select></label
+              ><label
+                >Sort by<select id="rank-sort">
+                  <option value="rank">Current priority</option>
+                  <option value="up">Biggest rise</option>
+                  <option value="down">Biggest fall</option>
+                  <option value="name">Community A–Z</option>
+                </select></label
+              ><button id="rank-filter-reset">Clear filters</button>
+            </div>
+            <p class="footnote">
+              Filters narrow the view; ranks and scores always use the full
+              selected model. Rank 1 is highest priority. Movement compares with
+              the original EWM ranking for this same model.
+            </p>
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Current rank</th>
+                    <th>Community</th>
+                    <th>Score</th>
+                    <th>Original rank</th>
+                    <th>Movement</th>
+                    <th>Population</th>
+                    <th>Mobile need</th>
+                    <th>NBN need</th>
+                  </tr>
+                </thead>
+                <tbody id="rank-rows"></tbody>
+              </table>
+            </div>
+            <div class="pagination">
+              <span id="rank-page-label" aria-live="polite"></span>
+              <div>
+                <button id="rank-prev">← Previous</button
+                ><button id="rank-next">Next →</button>
+              </div>
+            </div>
+          </section>
+          <section class="panel rank-method">
+            <details>
+              <summary>How scoring and comparison work</summary>
+              <p>
+                For each factor, normalised value = (value − minimum) / (maximum
+                − minimum). Priority score = sum of normalised value × factor
+                weight. Every factor increases priority as its value increases.
+                A score is an index, not a percentage without coverage.
+              </p>
+              <p>
+                Ranges are fixed to the full community set in each uploaded
+                model. Adjusting weights does not recalculate entropy. Ranking 1
+                contains 792 communities; Ranking 2 includes the 468 with
+                recorded population. The 324 missing-population communities are
+                excluded from Ranking 2, not assigned zero population.
+              </p>
+              <p>
+                Models use different populations, weights and normalisation
+                ranges, so their scores are not directly comparable. Population
+                is an independent factor: a large community may rank highly even
+                with both need flags set to 0. Need flags use the uploaded 0/1
+                values; their exact definitions should be checked against the
+                preparation code.
+              </p>
+              <p>
+                Equal scores share a rank (for example 1, 1, 3); ties are
+                displayed in community-name order. Calculations use full
+                precision. Displayed percentages and scores are rounded.
+              </p>
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Factor</th>
+                      <th>Minimum</th>
+                      <th>Maximum</th>
+                      <th>Original EWM</th>
+                      <th>Current weight</th>
+                    </tr>
+                  </thead>
+                  <tbody id="rank-method-rows"></tbody>
+                </table>
+              </div>
+            </details>
+          </section>
+        </div>
+      </section>
+      <dialog id="rank-detail">
+        <div class="dialog-head">
+          <span class="eyebrow">PRIORITY BREAKDOWN</span
+          ><button id="rank-detail-close" aria-label="Close priority breakdown">
+            ✕
+          </button>
+        </div>
+        <h2 id="rank-detail-name"></h2>
+        <p id="rank-detail-sub"></p>
+        <div id="rank-detail-body"></div>
+      </dialog>
+    </main>
+    <dialog id="detail">
+      <div class="dialog-head">
+        <span class="eyebrow">COMMUNITY PROFILE</span
+        ><button id="close" aria-label="Close community profile">✕</button>
+      </div>
+      <h2 id="detail-name"></h2>
+      <p id="detail-type"></p>
+      <div id="detail-content"></div>
+    </dialog>
+    <script type="module" src="/src/app/main.js"></script>
+  </body>
+</html>
