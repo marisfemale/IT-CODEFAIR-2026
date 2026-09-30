@@ -1,4 +1,4 @@
-const CACHE_NAME = "connectnt-prototype-v2";
+const CACHE_NAME = "nt-investment-layer-v5";
 const CORE_ASSETS = [
   "./",
   "./index.html",
@@ -7,6 +7,13 @@ const CORE_ASSETS = [
   "./data/communities.js",
   "./manifest.webmanifest",
   "./favicon.svg",
+  "./vendor/leaflet/leaflet.css",
+  "./vendor/leaflet/leaflet.js",
+  "./vendor/leaflet/images/layers.png",
+  "./vendor/leaflet/images/layers-2x.png",
+  "./vendor/leaflet/images/marker-icon.png",
+  "./vendor/leaflet/images/marker-icon-2x.png",
+  "./vendor/leaflet/images/marker-shadow.png",
 ];
 
 self.addEventListener("install", (event) => {

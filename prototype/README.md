@@ -1,9 +1,19 @@
-# ConnectNT prototype
+# Northern Territory Investment Layer prototype
 
-ConnectNT is a map-first screening layer for deciding which remote Northern
+The Northern Territory Investment Layer is a map-first screening layer for deciding which remote Northern
 Territory communities should be investigated first for connectivity investment.
 It complements the Australian Government's First Nations Connectivity Mapping
 Tool; it does not reproduce or replace that source.
+
+The map has two context modes:
+
+- **Street** loads standard OpenStreetMap tiles when an internet connection is
+  available. The decision markers and scores remain this project's own layer.
+- **Schematic** uses the bundled NT orientation map and remains available
+  offline. If live tiles fail, the application switches to this mode.
+
+The service worker caches the application, decision dataset and locally bundled
+Leaflet library. It deliberately does not prefetch or store OpenStreetMap tiles.
 
 ## Run
 
@@ -38,3 +48,10 @@ validation, cost, power and backhaul remain due-diligence requirements.
 The intended decision framing is **Need → Benefit → Delivery readiness →
 Sustainability → Community mandate → Due diligence priority**. Unknown evidence
 should remain visible rather than being converted into false certainty.
+
+## Third-party mapping
+
+The prototype bundles Leaflet 1.9.4 under its BSD-2-Clause licence. The online
+basemap is © OpenStreetMap contributors and is used subject to the OpenStreetMap
+tile usage policy and Open Database Licence. Attribution remains visible
+whenever the Street layer is active.

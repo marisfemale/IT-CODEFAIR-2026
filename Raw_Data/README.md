@@ -23,7 +23,7 @@ Source: https://spatial.infrastructure.gov.au/portal/home/item.html?id=29918b8b3
 
 The prototype data build can download the Bureau of Meteorology historical
 tropical cyclone best-track CSV. The raw download is cached locally under
-`.cache/` and is not committed. ConnectNT uses tropical-cyclone observations
+`.cache/` and is not committed. The Northern Territory Investment Layer uses tropical-cyclone observations
 from 1970 onward to count unique historical tracks within 100 km and 200 km of
 each community and calculate a relative exposure indicator.
 

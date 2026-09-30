@@ -72,6 +72,7 @@
     screen: "prototype",
     mode: "need",
     view: "map",
+    basemap: navigator.onLine && window.L ? "street" : "schematic",
     filters: {
       search: "",
       region: "all",
@@ -94,10 +95,15 @@
 
   const elements = {
     map: document.getElementById("priority-map"),
+    streetMap: document.getElementById("street-map"),
     mapBase: document.getElementById("map-base"),
     regionLabels: document.getElementById("region-labels"),
     markers: document.getElementById("community-markers"),
     mapContainer: document.getElementById("map-container"),
+    mapDisclaimer: document.getElementById("map-disclaimer"),
+    mapStatus: document.getElementById("map-status"),
+    osmAttribution: document.getElementById("osm-attribution"),
+    runtimeMode: document.getElementById("runtime-mode"),
     tableContainer: document.getElementById("table-container"),
     tableBody: document.getElementById("results-table-body"),
     tableCaption: document.getElementById("table-caption"),
@@ -145,6 +151,12 @@
   };
 
   const formatNumber = new Intl.NumberFormat("en-AU");
+  let leafletMap = null;
+  let leafletMarkers = null;
+  let osmTiles = null;
+  let tileLoads = 0;
+  let tileErrors = 0;
+  let statusTimer = null;
 
   function escapeHtml(value) {
     return String(value ?? "")
@@ -284,6 +296,141 @@
     });
   }
 
+  function showMapStatus(message, duration = 4500) {
+    window.clearTimeout(statusTimer);
+    elements.mapStatus.textContent = message || "";
+    elements.mapStatus.hidden = !message;
+    if (message && duration) {
+      statusTimer = window.setTimeout(() => {
+        elements.mapStatus.hidden = true;
+      }, duration);
+    }
+  }
+
+  function leafletIcon(row) {
+    const tier = tierFor(row);
+    const classes = ["decision-marker", `marker-${tierClass(tier)}`];
+    if (row.id === state.selectedId) classes.push("is-selected");
+    if (row.dataCompleteness !== "High") classes.push("medium-completeness");
+    return window.L.divIcon({
+      className: classes.join(" "),
+      html: `<span class="marker-glyph" style="--marker-color:${markerColor(tier)}" aria-hidden="true"></span>`,
+      iconSize: [24, 24],
+      iconAnchor: [12, 12],
+    });
+  }
+
+  function renderLeafletMarkers(rows) {
+    if (!leafletMap || !leafletMarkers) return;
+    leafletMarkers.clearLayers();
+    rows.forEach((row) => {
+      const tier = tierFor(row);
+      const score = scoreFor(row);
+      const marker = window.L.marker([row.lat, row.lon], {
+        icon: leafletIcon(row),
+        keyboard: true,
+        riseOnHover: true,
+        title: `${row.name} — ${tier} — ${score ?? "unknown"}`,
+        zIndexOffset: Math.round((score || 0) * 10) + (row.id === state.selectedId ? 2000 : 0),
+      });
+      marker.bindTooltip(
+        `<strong>${escapeHtml(row.name)}</strong><br>${escapeHtml(tier)} · ${score === null ? "unknown" : score.toFixed(1)}`,
+        { className: "nt-layer-tooltip", direction: "top", offset: [0, -9] },
+      );
+      marker.on("click", () => selectCommunity(row.id));
+      marker.addTo(leafletMarkers);
+    });
+  }
+
+  function resetLeafletMap() {
+    if (!leafletMap) return;
+    const compact = window.innerWidth <= 820;
+    const shortlistVisible = window.innerWidth > 1120;
+    leafletMap.fitBounds(
+      [[-26.15, 128.9], [-10.55, 138.15]],
+      {
+        animate: false,
+        paddingTopLeft: compact ? [18, 150] : [300, 110],
+        paddingBottomRight: compact ? [18, 80] : [shortlistVisible ? 390 : 30, 50],
+      },
+    );
+  }
+
+  function initialiseLeaflet() {
+    if (!window.L || !elements.streetMap) {
+      state.basemap = "schematic";
+      return;
+    }
+
+    leafletMap = window.L.map(elements.streetMap, {
+      attributionControl: false,
+      zoomControl: false,
+      minZoom: 4,
+      maxZoom: 18,
+      maxBounds: [[-31, 122], [-7, 146]],
+      maxBoundsViscosity: 0.75,
+    });
+    leafletMarkers = window.L.layerGroup().addTo(leafletMap);
+    osmTiles = window.L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      minZoom: 4,
+      maxZoom: 18,
+      updateWhenIdle: true,
+      keepBuffer: 2,
+    });
+
+    osmTiles.on("tileload", () => {
+      tileLoads += 1;
+      tileErrors = 0;
+    });
+    osmTiles.on("tileerror", () => {
+      tileErrors += 1;
+      if (tileErrors >= 3 && tileLoads === 0 && state.basemap === "street") {
+        window.setTimeout(() => {
+          if (tileLoads === 0 && state.basemap === "street") {
+            activateBasemap("schematic", "Street map unavailable. Showing the offline schematic instead.");
+          }
+        }, 250);
+      }
+    });
+
+    resetLeafletMap();
+    window.addEventListener("resize", () => {
+      if (!leafletMap) return;
+      leafletMap.invalidateSize({ animate: false });
+    });
+  }
+
+  function activateBasemap(requested, message = "") {
+    let next = requested;
+    if (requested === "street" && (!leafletMap || !navigator.onLine)) {
+      next = "schematic";
+      message = "Street map needs an internet connection. The decision layer remains available offline.";
+    }
+
+    state.basemap = next;
+    elements.mapContainer.classList.toggle("is-street", next === "street");
+    elements.mapContainer.classList.toggle("is-schematic", next === "schematic");
+    elements.osmAttribution.hidden = next !== "street";
+    elements.runtimeMode.textContent = next === "street" ? "online context · offline-ready" : "offline schematic";
+
+    const streetButton = document.getElementById("street-map-button");
+    const schematicButton = document.getElementById("schematic-map-button");
+    streetButton.classList.toggle("is-active", next === "street");
+    streetButton.setAttribute("aria-pressed", String(next === "street"));
+    schematicButton.classList.toggle("is-active", next === "schematic");
+    schematicButton.setAttribute("aria-pressed", String(next === "schematic"));
+
+    if (leafletMap && osmTiles) {
+      if (next === "street") {
+        if (!leafletMap.hasLayer(osmTiles)) osmTiles.addTo(leafletMap);
+        window.requestAnimationFrame(() => leafletMap.invalidateSize({ animate: false }));
+      } else if (leafletMap.hasLayer(osmTiles)) {
+        leafletMap.removeLayer(osmTiles);
+      }
+    }
+    showMapStatus(message);
+  }
+
   function matchesBooleanFilter(value, filterValue) {
     if (filterValue === "all") return true;
     if (filterValue === "yes") return value === true;
@@ -408,6 +555,7 @@
     const fragment = document.createDocumentFragment();
     rows.forEach((row) => fragment.appendChild(markerNode(row)));
     elements.markers.replaceChildren(fragment);
+    renderLeafletMarkers(rows);
     elements.emptyMap.hidden = rows.length !== 0;
   }
 
@@ -584,8 +732,10 @@
     const mapVisible = state.view === "map";
     elements.mapContainer.hidden = !mapVisible;
     elements.tableContainer.hidden = mapVisible;
-    document.getElementById("map-view-button").classList.toggle("is-active", mapVisible);
     document.getElementById("table-view-button").classList.toggle("is-active", !mapVisible);
+    if (mapVisible && state.basemap === "street" && leafletMap) {
+      window.requestAnimationFrame(() => leafletMap.invalidateSize({ animate: false }));
+    }
   }
 
   function render() {
@@ -683,6 +833,11 @@
   }
 
   function zoomMap(factor) {
+    if (state.basemap === "street" && leafletMap) {
+      if (factor < 1) leafletMap.zoomIn();
+      else leafletMap.zoomOut();
+      return;
+    }
     const view = state.mapViewBox;
     const nextWidth = Math.max(350, Math.min(1200, view.width * factor));
     const nextHeight = nextWidth * 0.76;
@@ -696,6 +851,7 @@
   function resetMap() {
     state.mapViewBox = { x: 0, y: 0, width: 1000, height: 760 };
     setViewBox();
+    resetLeafletMap();
   }
 
   function initialiseMapInteraction() {
@@ -770,14 +926,14 @@
       .map((id) => data.find((row) => row.id === id))
       .filter(Boolean);
     const rows = shortlistRows.length ? shortlistRows : sortedRows(filteredRows()).slice(0, 10);
-    exportCsv(rows, `connectnt-${state.mode}-shortlist.csv`);
+    exportCsv(rows, `nt-investment-layer-${state.mode}-shortlist.csv`);
   }
 
   function downloadEvidenceBrief() {
     const row = data.find((item) => item.id === state.selectedId);
     if (!row) return;
     const content = [
-      "CONNECTNT SCREENING EVIDENCE BRIEF",
+      "NORTHERN TERRITORY INVESTMENT LAYER — SCREENING EVIDENCE BRIEF",
       "",
       `Community: ${row.name}`,
       `Region: ${row.region}`,
@@ -802,7 +958,7 @@
       "",
       "Screening result only. Confirm coverage, feasibility, community priorities, costs, power, backhaul and consent before investment decisions.",
     ].join("\n");
-    downloadBlob(`connectnt-${row.name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-evidence.txt`, content, "text/plain;charset=utf-8");
+    downloadBlob(`nt-investment-layer-${row.name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-evidence.txt`, content, "text/plain;charset=utf-8");
   }
 
   function renderMethodology() {
@@ -865,7 +1021,16 @@
     });
 
     document.getElementById("reset-filters").addEventListener("click", resetFilters);
-    document.getElementById("map-view-button").addEventListener("click", () => { state.view = "map"; updateView(); });
+    document.getElementById("street-map-button").addEventListener("click", () => {
+      state.view = "map";
+      activateBasemap("street");
+      updateView();
+    });
+    document.getElementById("schematic-map-button").addEventListener("click", () => {
+      state.view = "map";
+      activateBasemap("schematic");
+      updateView();
+    });
     document.getElementById("table-view-button").addEventListener("click", () => { state.view = "table"; updateView(); });
     document.getElementById("zoom-in").addEventListener("click", () => zoomMap(0.82));
     document.getElementById("zoom-out").addEventListener("click", () => zoomMap(1.2));
@@ -874,7 +1039,7 @@
     elements.detailShortlist.addEventListener("click", () => state.selectedId && toggleShortlist(state.selectedId));
     document.getElementById("evidence-brief-button").addEventListener("click", downloadEvidenceBrief);
     document.getElementById("export-button").addEventListener("click", exportShortlist);
-    document.getElementById("table-export-button").addEventListener("click", () => exportCsv(sortedRows(filteredRows()), `connectnt-${state.mode}-filtered.csv`));
+    document.getElementById("table-export-button").addEventListener("click", () => exportCsv(sortedRows(filteredRows()), `nt-investment-layer-${state.mode}-filtered.csv`));
 
     document.getElementById("methodology-button").addEventListener("click", () => {
       renderMethodology();
@@ -935,8 +1100,21 @@
     initialiseMapInteraction();
     drawMapBase();
     drawRegionLabels();
+    initialiseLeaflet();
     resetMap();
+    activateBasemap(state.basemap);
     render();
+
+    window.addEventListener("offline", () => {
+      if (state.basemap === "street") {
+        activateBasemap("schematic", "Connection lost. The offline schematic and decision data remain available.");
+      }
+    });
+    window.addEventListener("online", () => {
+      if (state.basemap === "schematic") {
+        showMapStatus("Connection restored. Select Street to load OpenStreetMap context.");
+      }
+    });
 
     if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
       navigator.serviceWorker.register("service-worker.js").catch(() => undefined);

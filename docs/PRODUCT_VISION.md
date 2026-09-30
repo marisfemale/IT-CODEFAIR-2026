@@ -1,4 +1,4 @@
-# ConnectNT Investment Lens: product vision
+# Northern Territory Investment Layer: product vision
 
 ## Mission
 
@@ -6,7 +6,7 @@ Help decision-makers move from “where are the connectivity layers?” to “wh
 communities should we investigate next, why, and what evidence must be verified
 before investment?”
 
-ConnectNT is a decision layer above the Australian Government's First Nations
+The Northern Territory Investment Layer is a decision layer above the Australian Government's First Nations
 Connectivity Mapping Tool. It organises public evidence around a repeatable
 screening workflow; it is not a replacement map, an engineering design, or an
 automated investment decision.
@@ -36,6 +36,7 @@ automated investment decision.
 The runnable prototype provides:
 
 - map and accessible table views for 792 NT communities;
+- an optional OpenStreetMap context layer with a bundled offline schematic;
 - Need, Impact, Delivery context, Resilience and Combined lenses;
 - relative High / Medium / Lower tiers and a filter-aware Top 10;
 - filters for region, community profile, population, mapped coverage,

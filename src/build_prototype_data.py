@@ -1,4 +1,4 @@
-"""Build the offline ConnectNT prototype dataset.
+"""Build the offline Northern Territory Investment Layer dataset.
 
 The script joins the canonical community connectivity table with BushTel region
 metadata and the existing connectivity-priority ranking. It can optionally
@@ -105,7 +105,7 @@ def download_cyclones(destination: Path) -> None:
     print(f"Downloading Bureau of Meteorology cyclone tracks to {destination}")
     request = urllib.request.Request(
         CYCLONE_URL,
-        headers={"User-Agent": "ConnectNT-Prototype/1.0"},
+        headers={"User-Agent": "NT-Investment-Layer-Prototype/1.0"},
     )
     with urllib.request.urlopen(request, timeout=90) as response:
         destination.write_bytes(response.read())

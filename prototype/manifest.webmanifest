@@ -1,6 +1,6 @@
 {
-  "name": "ConnectNT Investment Lens",
-  "short_name": "ConnectNT",
+  "name": "Northern Territory Investment Layer",
+  "short_name": "NT Investment Layer",
   "description": "Offline-capable decision support for remote Northern Territory connectivity.",
   "start_url": "./",
   "display": "standalone",

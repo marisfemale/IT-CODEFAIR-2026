@@ -1,4 +1,4 @@
-"""Serve the ConnectNT prototype locally using Python's standard library."""
+"""Serve the NT Investment Layer using Python's standard library."""
 
 from __future__ import annotations
 
@@ -34,7 +34,7 @@ def main() -> None:
     )
     with ReusableTCPServer((args.host, args.port), handler) as server:
         url = f"http://{args.host}:{args.port}/"
-        print(f"ConnectNT prototype: {url}")
+        print(f"Northern Territory Investment Layer: {url}")
         print("Press Ctrl+C to stop.")
         if args.open:
             webbrowser.open(url)

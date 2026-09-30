@@ -6,7 +6,7 @@ This repository is for our submission to the [CDU IT Code Fair 2026 Data Innovat
 
 Remote communities across Australia often experience limited or unreliable internet and mobile coverage. These connectivity gaps restrict access to education, healthcare, government support, and other essential digital services.
 
-Our response is **ConnectNT Investment Lens**: an offline-capable, map-first screening layer that helps users move from viewing many government data layers to forming a transparent, evidence-based shortlist for further investigation. It complements the Australian Government's First Nations Connectivity Mapping Tool rather than reproducing it.
+Our response is the **Northern Territory Investment Layer**: an offline-capable, map-first screening layer that helps users move from viewing many government data layers to forming a transparent, evidence-based shortlist for further investigation. It complements the Australian Government's First Nations Connectivity Mapping Tool rather than reproducing it.
 
 ## Challenge objectives
 
@@ -20,9 +20,14 @@ The solution should:
 
 ## Our solution
 
-**Project name:** ConnectNT Investment Lens
-**Team number:**   
+**Project name:** Northern Territory Investment Layer
+**Team number:** 09   
 **Team members and roles:** 
+    Ngoc Loi Vong___________________________Priority Analysis
+    Hoang Phuong Linh Le____________________Connectivity Data Analysis
+    Duong Trung Hieu________________________Mapping & Spatial Analysis
+    Maris Nguyen (Luong Thuy Dieu Nguyen)___Visualization 
+
 
 ### Problem
 
@@ -30,7 +35,7 @@ Existing public maps are valuable for exploring infrastructure and coverage, but
 
 ### Approach
 
-The prototype joins the project's community connectivity table, existing EWM priority ranking and BushTel regional/governance fields. It optionally derives a historical cyclone-exposure indicator from the Bureau of Meteorology tropical cyclone best-track dataset. Five switchable lenses—Need, Impact, Delivery context, Resilience and Combined—support regional/profile filters, a filter-aware Top 10, community evidence cards and a comparison shortlist.
+The prototype joins the project's community connectivity table, existing EWM priority ranking and BushTel regional/governance fields. It optionally derives a historical cyclone-exposure indicator from the Bureau of Meteorology tropical cyclone best-track dataset. Five switchable lenses—Need, Impact, Delivery context, Resilience and Combined—support regional/profile filters, a filter-aware Top 10, community evidence cards and a comparison shortlist. An optional OpenStreetMap street layer provides online geographic context; the bundled schematic remains available offline.
 
 The prototype produces a **priority for due diligence**, not an investment recommendation. It deliberately uses the phrase **delivery context**, not feasibility: distance to mapped infrastructure is useful for screening but cannot estimate CapEx, access, capacity, terrain constraints or permission to co-locate. A community being 40 km from a tower does not by itself show whether fibre, microwave, mobile, fixed-wireless or satellite deployment is technically or commercially viable. The interface keeps these validation requirements visible.
 
@@ -43,7 +48,7 @@ The prototype produces a **priority for due diligence**, not an investment recom
 
 ### Recommendations
 
-Use ConnectNT to create a transparent investigation shortlist, then validate it with communities and current field evidence. The next evidence phase should add measured service reliability, essential facilities, youth demographics, terrain/backhaul/power, funded-project overlap, costs and community-defined priorities. No ranking should be treated as community consent or an automatic investment decision.
+Use the Northern Territory Investment Layer to create a transparent investigation shortlist, then validate it with communities and current field evidence. The next evidence phase should add measured service reliability, essential facilities, youth demographics, terrain/backhaul/power, funded-project overlap, costs and community-defined priorities. No ranking should be treated as community consent or an automatic investment decision.
 
 The longer-term decision flow is **Need → Benefit → Delivery readiness → Sustainability → Community mandate → Due diligence priority**. A candidate should finish with an explainable decision card such as: **High community need · High benefit potential · Delivery complexity unknown · Possible funding overlap · Community support not yet assessed.** See [the product vision](docs/PRODUCT_VISION.md) for the staged roadmap and guardrails.
 
@@ -197,9 +202,6 @@ Submissions are assessed on:
 
 Challenge Day runs from 9:00 am to 5:00 pm at Festival Learning Space 1.12, Danala, Education and Community Precinct, Darwin, Charles Darwin University. Each team presents a 10-minute pitch followed by 5 minutes of questions from the judges.
 
-## Eligibility
-
-Teams must contain two to four enrolled CDU IT coursework students from undergraduate, postgraduate, TAFE, or short-course programs. Higher Degree by Research students are not eligible.
 
 ## Official links
 
@@ -208,6 +210,4 @@ Teams must contain two to four enrolled CDU IT coursework students from undergra
 - [Report requirements](https://itcodefair.cdu.edu.au/data-innovation-challenge-requirement/)
 - https://spatial.infrastructure.gov.au/portal/apps/experiencebuilder/experience/?id=81c5ae65fbf74ce3a89cf25b1f323d50&page=Page
 
-## Licence
 
-_Add the licence for the project code and verify that all third-party datasets remain subject to their original licences and terms of use._
